@@ -11,7 +11,10 @@
       <section
         class="flex justify-between flex-row p-2 text-black dark:bg-gray-700 bg-gray-200 rounded-t-lg"
       >
-        <div class="text-white endpoint sticky top-0 z-1"><span class="method">{{method}}</span>  <span class="dark:text-gray-200 text-gray-700"> {{ endpoint }}</span></div>
+        <div class="text-white endpoint sticky top-0 z-1">
+          <span :class="checkMethod" class="font-bold">{{ method }}&nbsp;</span>
+          <span class="dark:text-gray-200 text-gray-700">{{ endpoint }}</span>
+        </div>
         <div class="relative">
           <button
             v-show="!showDropDown"
@@ -84,7 +87,7 @@
 import { ref } from "@vue/reactivity";
 
 import { useData, useRouter } from "vitepress";
-import { nextTick } from "@vue/runtime-core";
+import { computed, nextTick } from "@vue/runtime-core";
 import { useLangFromQuery } from "./composables/useLangFromQuery";
 import { labraries } from "./composables/useLabraries";
 import { onClickOutside } from "@vueuse/core";
@@ -93,7 +96,7 @@ export default {
 
   props: {
     lang: { type: String },
-    method: {type: String},
+    method: { type: String },
     endpoint: { type: String },
   },
   setup(props, { slots }) {
@@ -117,6 +120,23 @@ export default {
       showDropDown.value = false;
     });
 
+    // Change color for each method
+    const checkMethod = computed(() => {
+      switch (props.method) {
+        case "POST":
+          return "text-green-400";
+        case "GET":
+          return "text-blue-400";
+        case "PUT":
+          return "text-yellow-500";
+        case "PATCH":
+          return "text-yellow-500";
+       case "DELETE":
+          return "text-red-400";
+        default:
+          return "text-sky-500";
+      }
+    });
     return {
       dir,
       langFromQuery,
@@ -124,6 +144,7 @@ export default {
       labraries,
       showDropDown,
       dropDownItems,
+      checkMethod,
     };
   },
 };
@@ -132,10 +153,10 @@ export default {
 .code-section div {
   width: 100%;
 }
-.method{
-  color:deepskyblue !important;
+.method {
+  color: deepskyblue !important;
 }
-.endpoint{
+.endpoint {
   font-family: monospace, monospace, sans-serif;
   font-size: 0.9em;
   color: #a3acb9;
