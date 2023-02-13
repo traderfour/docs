@@ -1,0 +1,143 @@
+<template>
+  <div
+    v-if="lang.toLowerCase() === langFromQuery"
+    class="rounded-lg my-5 grid gap-6 md:grid-cols-2 grid-cols-1"
+    :style="dir === 'rtl' ? 'direction:rtl' : ''"
+  >
+    <div class="col-span-1">
+      <slot />
+    </div>
+    <div class="col-span-1">
+      <section
+        class="flex justify-between flex-row p-2 text-black bg-gray-700 rounded-t-lg"
+      >
+        <div class="text-white endpoint sticky top-0 z-1"><span class="method">{{method}}</span>  {{ endpoint }}</div>
+        <div class="relative">
+          <button
+            v-show="!showDropDown"
+            @click="showDropDown = true"
+            class="flex flex-row px-3 py-1 rounded-md bg-gray-800 text-gray-300 border-0"
+          >
+            <span class="mr-1">{{ lang }}</span>
+            <svg
+              class="w-5 h-5 mt-1 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            v-show="showDropDown"
+            @click="showDropDown = false"
+            class="flex flex-row px-3 py-1 rounded-md bg-gray-800 text-gray-300 border-0"
+          >
+            <span class="mr-1">{{ lang }}</span>
+            <svg
+              class="w-5 h-5 mt-1 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            v-show="showDropDown"
+            ref="dropDownItems"
+            class="absolute right-0 py-2 mt-2 rounded-md shadow-xl z-10 bg-gray-800"
+          >
+            <div
+              :value="item.name"
+              v-for="(item, index) in labraries"
+              v-show="item.name.toLowerCase() !== langFromQuery"
+              class="block px-4 py-2 text-sm hover:bg-gray-700 text-gray-300 cursor-pointer"
+              :key="index"
+              @click="toggleTabs(item.name, $event)"
+            >
+              <span>
+                {{ item.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="code-section flex justify-between flex-col p-2 bg-gray-800 text-gray-800 rounded-b-lg max-h-screen"
+      >
+        <slot name="code" />
+      </section>
+    </div>
+  </div>
+</template>
+<script>
+import { ref } from "@vue/reactivity";
+
+import { useData, useRouter } from "vitepress";
+import { nextTick } from "@vue/runtime-core";
+import { useLangFromQuery } from "./composables/useLangFromQuery";
+import { labraries } from "./composables/useLabraries";
+import { onClickOutside } from "@vueuse/core";
+export default {
+  name: "CodeBox",
+
+  props: {
+    lang: { type: String },
+    method: {type: String},
+    endpoint: { type: String },
+  },
+  setup(props, { slots }) {
+    const { dir } = useData();
+    const router = useRouter();
+    const langFromQuery = useLangFromQuery();
+    const showDropDown = ref(false);
+    const dropDownItems = ref(null);
+
+    function toggleTabs(name, { pageY }) {
+      showDropDown.value = false;
+      router.go(
+        `${router.route.path}?lang=${name.toLowerCase()}&pos=${pageY - 100}`
+      );
+      nextTick(() => {
+        window.location.reload();
+      });
+    }
+
+    onClickOutside(dropDownItems, () => {
+      showDropDown.value = false;
+    });
+
+    return {
+      dir,
+      langFromQuery,
+      toggleTabs,
+      labraries,
+      showDropDown,
+      dropDownItems,
+    };
+  },
+};
+</script>
+<style>
+.code-section div {
+  width: 100%;
+}
+.method{
+  color:deepskyblue !important;
+}
+.endpoint{
+  font-family: monospace, monospace, sans-serif;
+  font-size: 0.9em;
+  color: #a3acb9;
+}
+</style>
