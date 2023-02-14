@@ -6,6 +6,11 @@
   >
     <div class="col-span-1">
       <slot />
+      <span class="text-xs schema">
+        <ul>
+          <slot name="params"/>
+        </ul>
+      </span>
     </div>
     <div class="col-span-1">
       <section

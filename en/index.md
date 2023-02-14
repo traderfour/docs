@@ -10,7 +10,7 @@ hero:
   text: ""
   tagline: More engineered, lightweight, customizable, standard output format Commitizen adapter and CLI.
   image:
-    src: /images/logo.png
+    src: /images/logo.svg
     alt: Trader4 Docs
   actions:
     - theme: brand
