@@ -39,10 +39,15 @@ Using our Update Account Method, users are now able to easily update their accou
 - `first_name` <span>String</span>, The first name of user.
 - `middle_name` <span>String</span>, The middle name of user.
 - `last_name` <span>String</span>, The last name of user.
+- `email` <span>String</span>, The email of user.
+- `mobile` <span>String</span>, The mobile of user.
+- `phone_number` <span>String</span>, The phone number of user.
 - `country` <span>String</span>, The country that user registered. Check out [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 - `language` <span>String</span>, The language that user selected. Check out [ISO 639](https://www.iso.org/iso-639-language-codes.html).
 - `timezone` <span>String</span>, The timezone that user selected. Check out [Timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
-- `currency` <span>String</span>, The currency that user selected. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+- `last_connection` <span>String</span>, The user last connection.
+- `private` <span>Boolean</span>, The user account type.
+- `avatar` <span>String</span>, The user avatar.
 
 </template>
 

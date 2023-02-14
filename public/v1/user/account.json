@@ -1,1 +1,19 @@
-{}
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": {
+    "first_name": "John",
+    "middle_name": "Doe",
+    "last_name": "Doe",
+    "email": "hi@trader4.net",
+    "mobile": "+447888872720",
+    "phone_number": "+445528888852",
+    "country": "GB",
+    "language": "en-US",
+    "timezone": "Europe/London",
+    "last_connection": "2023-02-13 21:26:12",
+    "private": false,
+    "avatar": "https://www.trader4.net/images/avatars/1.jpg"
+  },
+  "metas": []
+}
