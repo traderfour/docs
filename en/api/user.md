@@ -254,31 +254,31 @@ $ curl --request GET \
 
 <template #result>
 
-- `anti_phishing` <span>String</span>, The first name of user.
-- `google2fa_secret` <span>Boolean</span>, The middle name of user.
-- `email_2step` <span>String</span>, The last name of user.
-- `app_2step` <span>String</span>, The email address of user.
-- `mobile_2step` <span>String</span>, The mobile number of user.
-- `same_wallet` <span>String</span>, The phone number of user.
-- `fund_password` <span>String</span>, The country that user registered.
-- `registered_wallets` <span>String</span>, The language that user selected.
-- `delay` <span>String</span>, The timezone that user selected.
+- `anti_phishing` <span>Boolean</span>, The string that user can set for reciving emails to make sure that is not phishing.
+- `google2fa_secret` <span>Boolean</span>, The user Google 2fa setting state.
+- `email_2step` <span>Boolean</span>, The user Email 2fa setting state.
+- `app_2step` <span>Boolean</span>, The user App 2fa setting state
+- `mobile_2step` <span>Boolean</span>, The user Mobile 2fa setting state
+- `same_wallet` <span>Boolean</span>, The user same wallet setting state
+- `fund_password` <span>Boolean</span>, The user fund password setting state.
+- `registered_wallets` <span>Boolean</span>, The user registered wallets setting state.
+- `delay` <span>Integer</span>, The user delay setting state.
 
 </template>
 
 </Response>
 
-<CodeBox lang="Restful" method="POST" endpoint="/v1/oauth/qr">
+<CodeBox lang="Restful" method="PUT" endpoint="/v1/account/security">
 
 # Update Security
 
-Using our QR Code Check Method, users are now able to easily check the QR Code Token for token has been authorized or not.
+Using our account security Method, users are now able to easily update account securities states.
 
 <template #code>
 
 ```bash
-$ curl --request POST \
-  https://api.trader4.net/v1/oauth/qr \
+$ curl --request PUT \
+  https://api.trader4.net/v1/account/security \
   -u 'token: tr44670677563e9edb832e43'
 ```
 
@@ -286,67 +286,19 @@ $ curl --request POST \
 
 </CodeBox>
 
-<Response jfile="v1/oauth/qr-post" >
+<Response jfile="v1/user/security" >
 
 <template #result>
 
-- `first_name` <span>String</span>, The first name of user.
-- `middle_name` <span>String</span>, The middle name of user.
-- `last_name` <span>String</span>, The last name of user.
-- `email` <span>String</span>, The email address of user.
-- `mobile` <span>String</span>, The mobile number of user.
-- `phone_number` <span>String</span>, The phone number of user.
-- `country` <span>String</span>, The country that user registered.
-- `language` <span>String</span>, The language that user selected.
-- `timezone` <span>String</span>, The timezone that user selected.
-- `last_connection` <span>Datetime</span>, The last time that user connected to our system.
-- `private` <span>Boolean</span>, The privacy of user profile.
-- `avatar` <span>String</span>, The URL of user avatar.
-- `status` <span>Integer</span>, The status of user account. Check out [Account Status Table](https://docs.trader4.net/en/api/account/#account-status-table).
-- `access_token` <span>String</span>, The access token of user.
-- `token_type` <span>String</span>, The type of access token.
-
-</template>
-
-</Response>
-
-<CodeBox lang="Restful" method="POST" endpoint="/v1/oauth/qr">
-
-# Information
-
-Using our QR Code Check Method, users are now able to easily check the QR Code Token for token has been authorized or not.
-
-<template #code>
-
-```bash
-$ curl --request POST \
-  https://api.trader4.net/v1/oauth/qr \
-  -u 'token: tr44670677563e9edb832e43'
-```
-
-</template>
-
-</CodeBox>
-
-<Response jfile="v1/oauth/qr-post" >
-
-<template #result>
-
-- `first_name` <span>String</span>, The first name of user.
-- `middle_name` <span>String</span>, The middle name of user.
-- `last_name` <span>String</span>, The last name of user.
-- `email` <span>String</span>, The email address of user.
-- `mobile` <span>String</span>, The mobile number of user.
-- `phone_number` <span>String</span>, The phone number of user.
-- `country` <span>String</span>, The country that user registered.
-- `language` <span>String</span>, The language that user selected.
-- `timezone` <span>String</span>, The timezone that user selected.
-- `last_connection` <span>Datetime</span>, The last time that user connected to our system.
-- `private` <span>Boolean</span>, The privacy of user profile.
-- `avatar` <span>String</span>, The URL of user avatar.
-- `status` <span>Integer</span>, The status of user account. Check out [Account Status Table](https://docs.trader4.net/en/api/account/#account-status-table).
-- `access_token` <span>String</span>, The access token of user.
-- `token_type` <span>String</span>, The type of access token.
+- `anti_phishing` <span>Boolean</span>, The string that user can set for reciving emails to make sure that is not phishing.
+- `google2fa_secret` <span>Boolean</span>, The user Google 2fa setting state.
+- `email_2step` <span>Boolean</span>, The user Email 2fa setting state.
+- `app_2step` <span>Boolean</span>, The user App 2fa setting state
+- `mobile_2step` <span>Boolean</span>, The user Mobile 2fa setting state
+- `same_wallet` <span>Boolean</span>, The user same wallet setting state
+- `fund_password` <span>Boolean</span>, The user fund password setting state.
+- `registered_wallets` <span>Boolean</span>, The user registered wallets setting state.
+- `delay` <span>Integer</span>, The user delay setting state.
 
 </template>
 
