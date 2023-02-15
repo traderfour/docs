@@ -1,0 +1,10 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": {
+    "daily_report": "10:00",
+    "auto_renewal": false,
+    "auto_withdraw": "weekly"
+  },
+  "metas": []
+}

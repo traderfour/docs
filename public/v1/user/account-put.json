@@ -1,6 +1,6 @@
 {
   "succeed": true,
-  "message": "Response successfully returned",
+  "message": "The data has been successfully updated",
   "results": {
     "first_name": "John",
     "middle_name": "Doe",
