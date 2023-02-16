@@ -1,11 +1,13 @@
 <template>
-  <div
-    class="grid gap-6 md:grid-cols-2 grid-cols-1 my-5"
-    :style="dir === 'rtl' ? 'direction:rtl' : ''"
-  >
-    <section class="mx-2 col-span-1 text-sm">
-      <h2>Schema</h2>
-      <span class="text-xs schema">
+  <Suspense>
+    <template #default>
+      <div
+          class="grid gap-6 md:grid-cols-2 grid-cols-1 my-5"
+          :style="dir === 'rtl' ? 'direction:rtl' : ''"
+      >
+        <section class="mx-2 col-span-1 text-sm">
+          <h2>Schema</h2>
+          <span class="text-xs schema">
         <ul>
           <li>
             <code>succeed</code> <span>Boolean</span>
@@ -27,52 +29,42 @@
           </li>
         </ul>
       </span>
-    </section>
-    <section
-      class="col-span-1 bg-gray-50 dark:bg-gray-800 rounded-lg min-w-full max-w-sm max-h-screen overflow-auto overflow-x-auto"
-    >
-      <div
-        class="bg-gray-200 title text-black dark:bg-gray-700 dark:text-white text-white p-2 rounded-t-lg mb-4 sticky top-0 z-1"
-      >
-        RESPONSE
+        </section>
+        <section
+            class="col-span-1 bg-gray-50 dark:bg-gray-800 rounded-lg min-w-full max-w-sm max-h-screen overflow-auto overflow-x-auto"
+        >
+          <div
+              class="bg-gray-200 title text-black dark:bg-gray-700 dark:text-white text-white p-2 rounded-t-lg mb-4 sticky top-0 z-1"
+          >
+            RESPONSE
+          </div>
+          <ResponseData :jfile="jfile"/>
+        </section>
       </div>
-      <vue-json-pretty
-        :data="mockData"
-        style="direction: ltr"
-        class="p-3"
-        showLength
-        :showLine="false"
-      />
-    </section>
-  </div>
+    </template>
+    <template #fallback>
+      <div class="flex justify-center items-center h-64">
+        <div class="text-gray-500 dark:text-gray-400">Loading...</div>
+      </div>
+    </template>
+  </Suspense>
 </template>
 <script>
-import { ref } from "@vue/reactivity";
-import VueJsonPretty from "vue-json-pretty";
-import "vue-json-pretty/lib/styles.css";
-import { useData } from "vitepress";
+
+import {useData} from "vitepress";
+import ResponseData from "./ResponseData.vue";
 
 export default {
   name: "Response",
   components: {
-    VueJsonPretty,
+    ResponseData,
   },
   props: {
     jfile: { type: String },
   },
   setup(props) {
     const { dir } = useData();
-    let mockData = ref("NO CONTENT");
-
-    import('../../../public/'+props.jfile+'.json').then(
-      (module) => {
-        mockData.value = module.default;
-      }
-    );
-    return {
-      mockData,
-      dir,
-    };
+    return { dir, props }
   },
 };
 </script>
