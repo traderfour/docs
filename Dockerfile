@@ -27,7 +27,7 @@ FROM nginx:stable-alpine AS deploy
 WORKDIR /usr/src/app
 
 # Copy build directory
-COPY --from=build /usr/src/app/build /usr/share/nginx/html
+COPY --from=build /usr/src/app/.vitepress/dist /usr/share/nginx/html
 
 # copy nginx confiuration file
 COPY .ci/nginx.conf /etc/nginx/conf.d/default.conf

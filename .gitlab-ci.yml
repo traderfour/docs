@@ -34,6 +34,8 @@ deploy:
       --set domainName="docs.trader4.net"
       --set image.repository="${IMG_NAME}"
       --set image.tag="${IMG_TAG}"
+      --set tls.enabled="true"
+      --set tls.secretName="prod-docs-trader4-net-tls"
       --create-namespace
       .ci/chart
   environment:
@@ -54,6 +56,8 @@ deploy_next:
       --set domainName="next-docs.trader4.net"
       --set image.repository="${IMG_NAME}"
       --set image.tag="${IMG_TAG}"
+      --set tls.enabled="true"
+      --set tls.secretName="next-docs-trader4-net-tls"
       --create-namespace
       .ci/chart
   environment:
