@@ -1,7 +1,5 @@
 ---
 layout: home
-
-
 title: Trader4 Docs
 titleTemplate: More engineered, lightweight, customizable, standard output format commitizen adapter
 
