@@ -19,9 +19,11 @@ import SelectLibraries from "./components/SelectLibraries.vue";
 import CodeBox from "./components/CodeBox.vue";
 import { CodeGroup } from "./components/CodeGroup";
 
-if (inBrowser) {
+
+// disable PWA
+/* if (inBrowser) {
   import("./pwa");
-}
+} */
 
 export default {
   ...Theme,
