@@ -8,7 +8,7 @@
       <slot />
       <span class="text-xs schema">
         <ul>
-          <slot name="params"/>
+          <slot name="params" />
         </ul>
       </span>
     </div>
@@ -89,11 +89,10 @@
   </div>
 </template>
 <script>
-import { ref } from "@vue/reactivity";
+import { ref, onMounted } from "vue";
 
 import { useData, useRouter } from "vitepress";
 import { computed, nextTick } from "@vue/runtime-core";
-import { useLangFromQuery } from "./composables/useLangFromQuery";
 import { labraries } from "./composables/useLabraries";
 import { onClickOutside } from "@vueuse/core";
 export default {
@@ -107,10 +106,21 @@ export default {
   setup(props, { slots }) {
     const { dir } = useData();
     const router = useRouter();
-    const langFromQuery = useLangFromQuery();
     const showDropDown = ref(false);
     const dropDownItems = ref(null);
+    const loading = ref(true);
 
+    const langFromQuery = ref("");
+
+    onMounted(() => {
+      nextTick(() => {
+        loading.value = false;
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+
+        langFromQuery.value = params.lang;
+      });
+    });
     function toggleTabs(name, { pageY }) {
       showDropDown.value = false;
       router.go(
@@ -136,7 +146,7 @@ export default {
           return "text-yellow-500";
         case "PATCH":
           return "text-yellow-500";
-       case "DELETE":
+        case "DELETE":
           return "text-red-400";
         default:
           return "text-sky-500";
@@ -150,6 +160,7 @@ export default {
       showDropDown,
       dropDownItems,
       checkMethod,
+      loading,
     };
   },
 };

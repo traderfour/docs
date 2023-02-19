@@ -136,7 +136,29 @@ export const en: DefaultTheme.Sidebar = {
             {
               text: "Capital Road (Funded)",
               link: "/en/api/trader4/capital-road",
-            }
+            },
+            {
+            text: "Werify",
+            link: "/en/api/werify/intro",
+            items: [
+              {
+                text: "oAuth",
+                link: "/en/api/werify/oauth",
+              },
+              {
+                text: "User",
+                link: "/en/api/werify/user",
+              },
+              {
+                text: "Clap",
+                link: "/en/api/werify/clap",
+              },
+              {
+                text: "Comment",
+                link: "/en/api/werify/comment",
+              },
+            ]
+        },
       ],
     },
   ],

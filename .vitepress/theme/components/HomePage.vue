@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import { useData } from "vitepress";
 import { useEmojiItem, useMediumZoom } from "./composables";
+import { version } from "../../../package.json";
 
 const emoji = useEmojiItem();
 const { frontmatter } = useData();
@@ -52,6 +53,7 @@ useMediumZoom();
       </p>
     </div>
   </div>
+
   <p class="maauto max-w-1152px mt-10 lg:px-1 px-2">
     <img
       class="max-w-100%"
@@ -64,4 +66,7 @@ useMediumZoom();
       onerror="this.classList.add('error');"
     />
   </p>
+  <div class="flex flex-row text-xs mt-4 justify-center">
+    <span>version:{{ version }}</span>
+  </div>
 </template>
