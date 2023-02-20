@@ -20,7 +20,7 @@ export const shareConfig = defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     logo: {
-      src: "/images/logo.png",
+      src: "/images/trader 4-H.svg",
       alt: "Trader4 Docs-logo",
     },
     socialLinks: [{ icon: "github", link: github }],
