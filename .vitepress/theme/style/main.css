@@ -116,7 +116,7 @@ img.error::after {
 }
 
 .VPNavBarTitle .logo {
-  height: 44px;
+  height: 110px;
 }
 
 @media (max-width: 640px) {

@@ -1,15 +1,15 @@
 ---
 layout: home
-title: Trader4 Docs
+title: Azpays Docs
 titleTemplate: More engineered, lightweight, customizable, standard output format commitizen adapter
 
 hero:
-  name: Trader4 Docs
+  name: AzPays Docs
   text: ""
   tagline: More engineered, lightweight, customizable, standard output format Commitizen adapter and CLI.
   image:
-    src: /images/trader 4-H.svg
-    alt: Trader4 Docs
+    src: /images/Azpays-02.svg
+    alt: Azpays Docs
   actions:
     - theme: brand
       text: Get Started →
@@ -18,7 +18,7 @@ hero:
       text: Introduction
       link: /en/guide/
     - theme: alt
-      text: Why Trader4 Docs?
+      text: Why AzPays Docs?
       link: /en/guide/
     - theme: alt
       text: API
