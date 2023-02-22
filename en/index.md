@@ -1,6 +1,8 @@
 ---
 layout: home
+
 title: AzPays Docs
+
 titleTemplate: More engineered, lightweight, customizable, standard output format commitizen adapter
 
 hero:
@@ -9,7 +11,9 @@ hero:
   tagline: More engineered, lightweight, customizable, standard output format Commitizen adapter and CLI.
   image:
     src: /images/Azpays-02.svg
+
     alt: AzPays Docs
+
   actions:
     - theme: brand
       text: Get Started →
