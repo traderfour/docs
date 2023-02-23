@@ -7,19 +7,20 @@
     "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --vp-layout-max-width: 1490px;
   --vp-c-accent: rgb(218, 180, 11);
-  --vp-c-brand: #005de5;
-  --vp-c-brand-light: #005de5;
+  /* --vp-c-brand: #eb5c5c; */
+  --vp-c-brand: #0091d8;
+  --vp-c-brand-light: #0091d8;
   /* --vp-c-brand-lighter: #d2361c; */
-  --vp-c-brand-lighter: #0063a0;
-  --vp-c-brand-dark: #0063a0;
-  --vp-c-brand-darker: #0063a0;
+  --vp-c-brand-lighter: #15438c;
+  --vp-c-brand-dark: #15438c;
+  --vp-c-brand-darker: #15438c;
   --vp-c-green-light: #16a891;
   --vp-c-bg-nav: rgba(255, 255, 255, 0.7);
   --vp-c-bg-mark: rgb(232, 232, 232);
   /* --vp-custom-block-tip-border: rgba(18, 181, 157, 0.5); */
-  --vp-custom-block-tip-border: #15438c80;
+  --vp-custom-block-tip-border: rgba(21, 67, 140, 0.5);
   /* --vp-custom-block-tip-bg: hsla(171, 82%, 39%, 0.102); */
-  --vp-custom-block-tip-bg: rgba(107, 228, 255, 0.102);
+  --vp-custom-block-tip-bg: hsla(191, 100%, 71%, 0.102);
   --vp-custom-block-tip-text: #15438c;
   --vp-code-block-bg: rgba(232, 232, 232, 0.3);
   --vp-c-text-dark-1: rgb(240, 238, 238);
@@ -32,11 +33,11 @@
   --vp-c-kbd-box-inside-shadow: inset 1px 1px 2px #cdcde6,
     inset -1px -1px 4px #fff;
   --docsearch-container-background: rgba(83, 85, 90, 0.8);
-  --docsearch-logo-color: hsl(14, 57%, 43%);
+  --docsearch-logo-color: #ad4c2f;
 }
 
 .dark {
-  --vp-c-brand: #005de5;
+  --vp-c-brand: #0091d8;
   --vp-c-bg: rgb(26, 26, 26);
   --vp-c-bg-alt: rgb(23, 23, 23);
   --vp-c-bg-nav: rgba(23, 23, 23, 0.7);
@@ -72,14 +73,13 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     270deg,
-    /* #ef6f6f 30%, */ #005de5 30%,
-    /* #f090b0 */ #80cfff
+    /* #ef6f6f 30%, */ #15438c 30%,
+    /* #f090b0 */ #28bae0
   );
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
     /* #ffffff 30%, */ #ffffff 30%,
-
-    /* #e66666 */ #80cfff
+    /* #e66666 */ #28bae0
   );
   --vp-home-hero-image-filter: blur(30px);
 }
@@ -87,19 +87,19 @@
 .dark {
   --vp-home-hero-name-background: -webkit-linear-gradient(
     270deg,
-    /* #f25959 30%, */ #005de5 30%,
-    /* #e0cdee */ #bfe7ff
+    /* #f25959 30%, */ #15438c 30%,
+    /* #e0cdee */ #6ce3ff
   );
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
     /* #fff1f1 30%, */ #fff1f1 30%,
-    /* #f25959 */ #005de5
+    /* #f25959 */ #0091d8
   );
 }
 
 @media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(20px);
+    --vp-home-hero-image-filter: blur(60px);
   }
 }
 
