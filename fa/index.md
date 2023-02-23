@@ -10,14 +10,14 @@ hero:
   text: ""
   tagline: More engineered, lightweight, customizable, standard output format Commitizen adapter and API.
   image:
-    src: /images/logo.png
+    src: /images/trader 4-H.svg
     alt: Trader4 Docs
   actions:
     - theme: brand
       text: Get Started →
       link: /fa/guide/
     - theme: alt
-      text:  Introduction
+      text: Introduction
       link: /fa/guide/
     - theme: alt
       text: Why Trader4 Docs?
