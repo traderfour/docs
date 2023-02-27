@@ -342,7 +342,7 @@ $ curl --request GET \
 - `same_wallet` <span>Boolean</span>, The same wallet of user.
 - `fund_password` <span>Boolean</span>, The fund password of user.
 - `registered_wallets` <span>Boolean</span>, The registered wallets of user.
-- `delay` <span>Integer</span>, The delay. Check out [Delay Table](#delay-table)
+- `delay` <span>Integer</span>, Minutes that operation process should delay before start running in background. By default it's set to 15 minutes.
 
 </template>
 
@@ -365,7 +365,7 @@ Update user security info
 - `same_wallet` <span>Boolean</span>, The same wallet of user.
 - `fund_password` <span>Boolean</span>, The fund password of user.
 - `registered_wallets` <span>Boolean</span>, The registered wallets of user.
-- `delay` <span>Integer</span>, The delay. Check out [Delay Table](#delay-table)
+- `delay` <span>Integer</span>, Minutes that operation process should delay before start running in background. By default it's set to 15 minutes.
 
 </template>
 
@@ -403,7 +403,7 @@ $ curl --request PUT \
 - `same_wallet` <span>Boolean</span>, The same wallet of user.
 - `fund_password` <span>Boolean</span>, The fund password of user.
 - `registered_wallets` <span>Boolean</span>, The registered wallets of user.
-- `delay` <span>Integer</span>, The delay. Check out [Delay Table](#delay-table)
+- `delay` <span>Integer</span>, Minutes that operation process should delay before start running in background. By default it's set to 15 minutes.
 
 </template>
 
@@ -413,16 +413,8 @@ $ curl --request PUT \
 
 | CODE                | CONSTANT                | DESCRIPTION                                                                                |
 |---------------------|-------------------------|--------------------------------------------------------|
-| <code>1</code>      | <pre>daily</pre>        | Auto withdraw once a day.                              |
-| <code>2</code>      | <pre>weekly</pre>       | Auto withdraw once a week.                             |
-| <code>3</code>      | <pre>bi_weekly</pre>    | Auto withdraw once every two weeks.                    |
-| <code>4</code>      | <pre>monthly</pre>      | Auto withdraw once a month.                            |
-| <code>5</code>      | <pre>yearly</pre>       | Auto withdraw once a year.                             |
-
----
-
-## Delay Table
-
-| CODE                | CONSTANT                        | DESCRIPTION                                                                                |
-|---------------------|---------------------------------|--------------------------------------------------------|
-| <code>1</code>      | <pre>fifteen_minutes</pre>      | Delay for 15 minutes.                                  |
+| <code>11201</code>      | <pre>daily</pre>        | Auto withdraw once a day.                          |
+| <code>11202</code>      | <pre>weekly</pre>       | Auto withdraw once a week.                         |
+| <code>11203</code>      | <pre>bi_weekly</pre>    | Auto withdraw once every two weeks.                |
+| <code>11204</code>      | <pre>monthly</pre>      | Auto withdraw once a month.                        |
+| <code>11205</code>      | <pre>yearly</pre>       | Auto withdraw once a year.                         |
