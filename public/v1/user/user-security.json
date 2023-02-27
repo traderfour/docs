@@ -4,12 +4,12 @@
   "result": {
     "anti_phishing": "QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ODc5MWVmYy04YzIyLTQ0MjEtYjQ5Ny1iNTViNTAxMDEzOGEiLCJqdGkiOiIwY2",
     "google2fa_secret": "eyJ0eXAiOiJKV1MyY2UyNzRmYThjNjM4NjI2MWI2OGFlZWQwNTY2NjJjOTIyMzMyZTQ1MmQxZDg1MTc1YmVmMTc5MTliODIxM2YzOTJiNGJkZTQ0ZGI5NSIsImlhdCI6MTY3N",
-    "email_2step": "NzRmYThjNjM4NjI2MWI2OGFlZWQwNTY2NjJjOTIyMzMyZTQ1MmQxZDg1MTc1YmVmMTc5MTliODIxM2Yz",
-    "app_2step": "NzRmYThjNjM4NjI2MWI2OGFlZWQwNTY2NjJjOTIyMzMyZTQ1MmQxZDg1MTc1YmVmMTc5MTliODIxM2Yz",
-    "mobile_2step": "447888872720",
-    "same_wallet": null,
-    "fund_password": null,
-    "registered_wallets": null,
+    "email_2step": false,
+    "app_2step": false,
+    "mobile_2step": false,
+    "same_wallet": false,
+    "fund_password": "QiLCJhbGciOiJSUzI1NiJ9",
+    "registered_wallets": true,
     "delay": 1
   },
   "meta": []

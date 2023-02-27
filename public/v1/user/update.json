@@ -1,6 +1,6 @@
 {
   "succeed": true,
-  "message": null,
+  "message": "The data has been successfully updated",
   "result": {
     "first_name": null,
     "middle_name": null,
@@ -11,10 +11,10 @@
     "country": "GB",
     "language": "en-US",
     "timezone": "Europe/London",
+    "currency": "EUR",
     "last_connection": null,
     "private": false,
-    "avatar": null,
-    "status": 0
+    "avatar": null
   },
   "meta": []
 }
