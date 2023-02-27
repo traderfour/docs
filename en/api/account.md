@@ -33,7 +33,7 @@ $ curl --request GET \
 - `email` <span>String</span>, The email address of user.
 - `mobile` <span>String</span>, The mobile number of user.
 - `phone_number` <span>String</span>, The phone number of user.
-- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-2](https://www.iso.org/iso-3166-country-codes.html).
+- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
 - `language` <span>String</span>, The language that user selected. Check out [ISO 639-1](https://www.iso.org/iso-639-language-codes.html).
 - `timezone` <span>String</span>, The timezone that user selected. Check out [Timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `currency` <span>String</span>, The currency that user selected. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
@@ -57,7 +57,7 @@ Using our Update Account Method, users are now able to easily update their accou
 - `first_name` <span>String</span>, The first name of user.
 - `middle_name` <span>String</span>, The middle name of user.
 - `last_name` <span>String</span>, The last name of user.
-- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-2](https://www.iso.org/iso-3166-country-codes.html).
+- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
 - `language` <span>String</span>, The language that user selected. Check out [ISO 639-1](https://www.iso.org/iso-639-language-codes.html).
 - `timezone` <span>String</span>, The timezone that user selected. Check out [Timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `currency` <span>String</span>, The currency that user selected. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
@@ -73,7 +73,7 @@ $ curl --request PUT \
     "first_name": "John",
     "middle_name": "Middle",
     "last_name": "Doe",
-    "country": "US",
+    "country": "USA",
     "language": "en-US",
     "timezone": "America/New_York",
     "currency": "USD"
@@ -94,7 +94,7 @@ $ curl --request PUT \
 - `email` <span>String</span>, The email address of user.
 - `mobile` <span>String</span>, The mobile number of user.
 - `phone_number` <span>String</span>, The phone number of user.
-- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-2](https://www.iso.org/iso-3166-country-codes.html).
+- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
 - `language` <span>String</span>, The language that user selected. Check out [ISO 639-1](https://www.iso.org/iso-639-language-codes.html).
 - `timezone` <span>String</span>, The timezone that user selected. Check out [Timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `currency` <span>String</span>, The currency that user selected. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
@@ -129,7 +129,7 @@ $ curl --request GET \
 
 - `daily_report` <span>Time</span>, Send daily report of account activities at the specified time in user local timezone. Check out [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 - `auto_renewal` <span>Boolean</span>, The auto renewal of user subscription and services.
-- `auto_withdraw` <span>String</span>, The auto withdraw of user.  Check out [Auto Withdraw Table](#auto-withdraw-table)
+- `auto_withdraw` <span>Integer</span>, The auto withdraw of user.  Check out [Auto Withdraw Table](#auto-withdraw-table)
 
 </template>
 
@@ -146,7 +146,7 @@ Using our Settings Method, users are now able to easily update their settings in
 
 - `daily_report` <span>Time</span>, Send daily report of account activities at the specified time in user local timezone. Check out [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 - `auto_renewal` <span>Boolean</span>, The auto renewal of user subscription and services.
-- `auto_withdraw` <span>String</span>, The auto withdraw of user.  Check out [Auto Withdraw Table](#auto-withdraw-table)
+- `auto_withdraw` <span>Integer</span>, The auto withdraw of user.  Check out [Auto Withdraw Table](#auto-withdraw-table)
 
 </template>
 
@@ -158,7 +158,7 @@ $ curl --request PUT \
     -d '{
         "daily_report": "09:00",
         "auto_renewal": true,
-        "auto_withdraw": "daily"
+        "auto_withdraw": 1"
     }'
 ```
 
@@ -172,7 +172,7 @@ $ curl --request PUT \
 
 - `daily_report` <span>Time</span>, Send daily report of account activities at the specified time in user local timezone. Check out [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 - `auto_renewal` <span>Boolean</span>, The auto renewal of user subscription and services.
-- `auto_withdraw` <span>String</span>, The auto withdraw of user.  Check out [Auto Withdraw Table](#auto-withdraw-table)
+- `auto_withdraw` <span>Integer</span>, The auto withdraw of user.  Check out [Auto Withdraw Table](#auto-withdraw-table)
 
 </template>
 
@@ -324,7 +324,6 @@ Return User security info
 ```bash
 $ curl --request GET \
  https://api.trader4.net/v1/account/security
-  --header 'Accept: application/json'
 ```
 
 </template>
@@ -335,15 +334,15 @@ $ curl --request GET \
 
 <template #result>
 
-- `anti_phishing` <span>String</span>, The anti phishing token of user.
-- `google2fa_secret` <span>Text</span>, The google 2FA token of user.
+- `anti_phishing` <span>Boolean</span>, The anti phishing token of user.
+- `google2fa_secret` <span>Boolean</span>, The google 2FA token of user.
 - `email_2step` <span>Boolean</span>, The email to use for 2FA of user.
 - `app_2step` <span>Boolean</span>, The app to use for 2FA of user.
 - `mobile_2step` <span>Boolean</span>, The mobile number to use for 2FA of user.
 - `same_wallet` <span>Boolean</span>, The same wallet of user.
-- `fund_password` <span>String</span>, The fund password of user.
+- `fund_password` <span>Boolean</span>, The fund password of user.
 - `registered_wallets` <span>Boolean</span>, The registered wallets of user.
-- `delay` <span>Integer</span>, The delay.
+- `delay` <span>Integer</span>, The delay. Check out [Delay Table](#delay-table)
 
 </template>
 
@@ -352,20 +351,21 @@ $ curl --request GET \
 <CodeBox lang="Restful" method="PUT" endpoint="/v1/account/security">
 
 # Update Security
+## Todo!
 
 Update user security info 
 
 <template #params>
 
-- `anti_phishing` <span>String</span>, The anti phishing token of user.
+- `anti_phishing` <span>Boolean</span>, The anti phishing token of user.
 - `google2fa_secret` <span>Boolean</span>, The google 2FA of user.
 - `email_2step` <span>Array of Strings</span>, The email to use for 2FA of user.
 - `app_2step` <span>Array of Strings</span>, The app mac addresses to use for 2FA of user.
 - `mobile_2step` <span>Array of Strings</span>, The mobile number to use for 2FA of user.
 - `same_wallet` <span>Boolean</span>, The same wallet of user.
-- `fund_password` <span>String</span>, The fund password of user.
+- `fund_password` <span>Boolean</span>, The fund password of user.
 - `registered_wallets` <span>Boolean</span>, The registered wallets of user.
-- `delay` <span>Integer</span>, The delay.
+- `delay` <span>Integer</span>, The delay. Check out [Delay Table](#delay-table)
 
 </template>
 
@@ -374,15 +374,14 @@ Update user security info
 ```bash
 $ curl --request PUT \
  https://api.trader4.net/v1/account/security
-  --header 'Accept: application/json'
   -d '{
-        "anti_phishing": "QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ODc5MWVmYy04YzIyLTQ0MjEtYjQ5Ny1iNTViNTAxMDEzOGEiLCJqdGkiOiIwY2",
-        "email_2step": true,
+        "anti_phishing": true,
+        "google2fa_secret": true,
         "email_2step": ["hi@trader4.net"],
         "app_2step": ["XX:XX:XX:XX:XX:XX"],
         "mobile_2step": ["+447888872720", "+4478888727250],
         "same_wallet": true,
-        "fund_password": "QiLCJhbGciOiJSUzI1NiJ9",
+        "fund_password": true,
         "registered_wallets": true,
         "delay": 1,
     }'
@@ -396,15 +395,15 @@ $ curl --request PUT \
 
 <template #result>
 
-- `anti_phishing` <span>String</span>, The anti phishing token of user.
-- `google2fa_secret` <span>Text</span>, The google 2FA token of user.
+- `anti_phishing` <span>Boolean</span>, The anti phishing token of user.
+- `google2fa_secret` <span>Boolean</span>, The google 2FA token of user.
 - `email_2step` <span>Boolean</span>, The email to use for 2FA of user.
 - `app_2step` <span>Boolean</span>, The app to use for 2FA of user.
 - `mobile_2step` <span>Boolean</span>, The mobile number to use for 2FA of user.
 - `same_wallet` <span>Boolean</span>, The same wallet of user.
-- `fund_password` <span>String</span>, The fund password of user.
+- `fund_password` <span>Boolean</span>, The fund password of user.
 - `registered_wallets` <span>Boolean</span>, The registered wallets of user.
-- `delay` <span>Integer</span>, The delay.
+- `delay` <span>Integer</span>, The delay. Check out [Delay Table](#delay-table)
 
 </template>
 
@@ -412,9 +411,18 @@ $ curl --request PUT \
 
 ## Auto Withdraw Table
 
-| VALUE               | DESCRIPTION                                                                                |
-|---------------------|--------------------------------------------------------------------------------------------|
-| <pre>daily</pre>    | Auto withdraw once a day.                                                                  |
-| <pre>weekly</pre>   | Auto withdraw once a week.                                                                 |
-| <pre>monthly</pre>  | Auto withdraw once a month.                                                                |
-| <pre>yearly</pre>   | Auto withdraw once a year.                                                                 |
+| CODE                | CONSTANT                | DESCRIPTION                                                                                |
+|---------------------|-------------------------|--------------------------------------------------------|
+| <code>1</code>      | <pre>daily</pre>        | Auto withdraw once a day.                              |
+| <code>2</code>      | <pre>weekly</pre>       | Auto withdraw once a week.                             |
+| <code>3</code>      | <pre>bi_weekly</pre>    | Auto withdraw once every two weeks.                    |
+| <code>4</code>      | <pre>monthly</pre>      | Auto withdraw once a month.                            |
+| <code>5</code>      | <pre>yearly</pre>       | Auto withdraw once a year.                             |
+
+---
+
+## Delay Table
+
+| CODE                | CONSTANT                        | DESCRIPTION                                                                                |
+|---------------------|---------------------------------|--------------------------------------------------------|
+| <code>1</code>      | <pre>fifteen_minutes</pre>      | Delay for 15 minutes.                                  |

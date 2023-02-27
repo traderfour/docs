@@ -73,7 +73,7 @@ $ curl --request POST \
 - `email` <span>String</span>, The email address of user.
 - `mobile` <span>String</span>, The mobile number of user.
 - `phone_number` <span>String</span>, The phone number of user.
-- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-2](https://www.iso.org/iso-3166-country-codes.html).
+- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
 - `language` <span>String</span>, The language that user selected. Check out [ISO 639-1](https://www.iso.org/iso-639-language-codes.html).
 - `timezone` <span>String</span>, The timezone that user selected. Check out [Timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `currency` <span>String</span>, The currency that user selected. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
@@ -123,7 +123,7 @@ $ curl --request GET \
 Add `?dl` to url parameter to response of server will be a QR Code image file download. For example:
 
 ```bash
-https://api.trader4.net/v1/oauth/qr/tr44670677563e9edb832e43?dl
+https://api.trader4.net/v1/oauth/qr/tr44670677563e9edb832e43.png?dl
 ```
 :::
 
@@ -180,7 +180,7 @@ $ curl --request POST \
 - `email` <span>String</span>, The email address of user.
 - `mobile` <span>String</span>, The mobile number of user.
 - `phone_number` <span>String</span>, The phone number of user.
-- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-2](https://www.iso.org/iso-3166-country-codes.html).
+- `country` <span>String</span>, The country that user registered. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
 - `language` <span>String</span>, The language that user selected. Check out [ISO 639-1](https://www.iso.org/iso-639-language-codes.html).
 - `timezone` <span>String</span>, The timezone that user selected. Check out [Timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 - `currency` <span>String</span>, The currency that user selected. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
