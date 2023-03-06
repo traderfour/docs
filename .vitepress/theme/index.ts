@@ -65,28 +65,32 @@ export default {
     // Hide index page for Hydration completed but contains mismatches. ERROR
     onMounted(() => {
       hideIndexPage();
-      const VPHome = document.querySelector(".VPHome");
-      console.log(VPHome);
-      VPHome?.classList.add("hidden");
     });
-    watch(
+    /* watch(
       () => router.route.path,
       (path) => {
         hideIndexPage();
-        setTimeout(() => {}, 10);
+        setTimeout(() => {
+          if (router.route.path !== "/en/") {
+            const VPHome = document.querySelector(".VPHome");
+            VPHome?.classList.add("hidden");
+          }
+        }, 10);
       }
-    );
+    ); */
 
     // BEGIN: Hide index page for Hydration completed but contains mismatches. ERROR
     const hideIndexPage = () => {
       if (router.route.path !== "/en/") {
+        const VPHome = document.querySelector(".VPHome");
+            VPHome?.classList.add("hidden");
         const appBar = document.querySelectorAll(".VPNavBarAppearance");
         const socialLinks = document.querySelectorAll(".VPNavBarSocialLinks");
         appBar.length > 1
           ? appBar[0].setAttribute("style", "display:none !important")
           : null;
         socialLinks.length > 1
-          ? appBar[0].setAttribute("style", "display:none !important")
+          ? socialLinks[0].setAttribute("style", "display:none !important")
           : null;
       }
     };
