@@ -58,16 +58,14 @@ export default {
   },
   setup() {
     const router = useRouter();
-    if (router.route.path === "/") {
-      router.go("/en/");
-    }
 
     // Hide index page for Hydration completed but contains mismatches. ERROR
-    onMounted(() => {
-      setTimeout(() => {
-        hideIndexPage();
-      }, 100);
-      
+    onMounted(async () => {
+      if (router.route.path === "/") {
+        await router.go("/en/");
+      }
+      console.log(router.route.path);
+      hideIndexPage();
     });
     /* watch(
       () => router.route.path,
