@@ -1,4 +1,4 @@
-import { h, onMounted, watch, watchEffect } from "vue";
+import { h, onMounted, watchEffect } from "vue";
 import Theme from "vitepress/theme";
 import { inBrowser, useData, useRouter } from "vitepress";
 import type { EnhanceAppContext } from "vitepress";
@@ -64,7 +64,10 @@ export default {
 
     // Hide index page for Hydration completed but contains mismatches. ERROR
     onMounted(() => {
-      hideIndexPage();
+      setTimeout(() => {
+        hideIndexPage();
+      }, 100);
+      
     });
     /* watch(
       () => router.route.path,
@@ -83,7 +86,7 @@ export default {
     const hideIndexPage = () => {
       if (router.route.path !== "/en/") {
         const VPHome = document.querySelector(".VPHome");
-            VPHome?.classList.add("hidden");
+        VPHome?.classList.add("hidden");
         const appBar = document.querySelectorAll(".VPNavBarAppearance");
         const socialLinks = document.querySelectorAll(".VPNavBarSocialLinks");
         appBar.length > 1
