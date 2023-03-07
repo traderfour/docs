@@ -1,0 +1,33 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": {
+    "uuid": "98a12098-8784-4169-815c-8141ca5ff0fd",
+    "name": "johnDoe",
+    "broker": "1",
+    "company": "ekvan",
+    "identity": "identity",
+    "secret": "eyJpdiI6IlVFZEF0eHZmVXAvbXlvOTdRK0piRVE9PSIsInZhbHVlIjoiWUZQVzQvVlhFWlQzaHlPeEVsMGFnUT09IiwibWFjIjoiMGJkY2M2NDFhYzJmOWE5MDRmYzQwMzdkMDUxMzBmZWU3MmQxYmUyMjUyNzkzY2Y5NjMwYmJmNzc3MzRlMTFkMSIsInRhZyI6IiJ9",
+    "read_only_secret": "eyJpdiI6InUxR1IxSytVaVJ5cG1raGFRY3B2WlE9PSIsInZhbHVlIjoiTGt0cHovTWg5b3VNTTNHRW1jOFU4Zz09IiwibWFjIjoiYzE4YTZkYTE4MmMwMmU4MmE5Y2E0ZTNiNTJiODM4MTcxYjJiNzkyM2YyMDE3OWEyNDI2NWVjZmU2MWNiNTQxNiIsInRhZyI6IiJ9",
+    "trade_mode": 0,
+    "margin_type": 0,
+    "order_limit": 200,
+    "trade_allowed": true,
+    "hedge": true,
+    "capital_road": true,
+    "server": "server",
+    "balance": 0,
+    "credit": 0,
+    "equity": null,
+    "currency": null,
+    "margin": null,
+    "free_margin": null,
+    "margin_level": null,
+    "leverage": null,
+    "stopout_level": null,
+    "market": null,
+    "report": 0,
+    "status": 0
+  },
+  "metas": []
+}
