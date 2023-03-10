@@ -119,7 +119,7 @@ export const en: DefaultTheme.Sidebar = {
         },
         {
           text: "Marketplace",
-          link: "/en/api/trader4/marketplace",
+          link: "/en/api/marketplace",
         },
         {
           text: "Cloud",
