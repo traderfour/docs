@@ -8,7 +8,7 @@ aside: false
 
 # List
 
-Using our Account Method, users are now able to easily retrieve their trading-account information.
+Using our List Method, users are now able to easily retrieve their trading-account information.
 
 <!--@include: /partials/authorization.md-->
 
@@ -27,29 +27,25 @@ $ curl --request GET \
 
 <template #result>
 
-- `name` <span>String</span>, The name of user.
-- `broker` <span>integer</span>, The type of broker.
+- `uuid` <span>String</span>, The id of trading account.
+- `name` <span>String</span>, The name of trading account.
+- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
-- `identity` <span>String</span>, The identity of user.
-- `trade_mode` <span>integer</span>.
-- `margin-type` <span>integer</span>.
-- `order_limit` <span>integer</span>.
-- `trade_allowed` <span>boolean</span>.
-- `hedge` <span>boolean</span>.
-- `capital-road` <span>boolean</span>.
-- `server` <span>String</span>the name of server.
-- `balance` <span>String</span>.
-- `credit` <span>String</span>.
-- `equity` <span>String</span>.
-- `currency` <span>Integer</span>.
-- `margin` <span>String</span>.
-- `free-margin` <span>String</span>.
-- `margin_level` <span>String</span>.
-- `leverage` <span>Integer</span>.
-- `stopout_level` <span>Integer</span>.
-- `market` <span>Integer</span>.
-- `report` <span>Integer</span>.
-- `status` <span>Integer</span>.
+- `identity` <span>String</span>, The identity of trading account.
+- `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
+- `margin_type` <span>integer</span> Check out [Margin Type Table](#margin-type-table).
+- `order_limit` <span>integer</span> The order limit of trading account.
+- `trade_allowed` <span>Boolean</span> Determines if the trading account is allowed to trade.
+- `hedge` <span>boolean</span> The hedge of trading account.
+- `capital_road` <span>Boolean</span> The capital road of trading account.
+- `server` <span>String</span> The name of server.
+- `link` <span>String</span> Link of trading account.
+- `currency` <span>String</span> Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+- `leverage` <span>Integer</span> The leverage of trading account.
+- `stopout_level` <span>Integer</span> The stopout level of trading account.
+- `market` <span>Integer</span> The market of trading account.
+- `report` <span>Integer</span> The report of trading account.
+- `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
 
 </template>
 
@@ -59,20 +55,19 @@ $ curl --request GET \
 
 # Create
 
-Using our store Account Method, users are now able to easily store their trading-account information.
-
+Using our Create Method, users are now able to easily store their trading-account information.
 
 <template #params>
 
-- `name` <span>String</span>, The first name of user.
-- `broker` <span>integer</span>, The type of broker.
+- `name` <span>String</span>, The name of trading account.
+- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
-- `identity` <span>String</span>, The identity of user.
-- `password` <span>String</span>, The password of user.
-- `server` <span>String</span>.
-- `link` <span>String</span>.
-- `capital-road` <span>String</span>.
-
+- `identity` <span>String</span>, The identity of trading account.
+- `secret` <span>String</span>, The secret of trading account.
+- `read_only_secret` <span>String</span>, The read only secret of trading account.
+- `capital_road` <span>Boolean</span> The capital road of trading account.
+- `server` <span>String</span> The name of server.
+- `link` (optional) <span>String</span> Link of trading account.
 
 </template>
 
@@ -83,11 +78,12 @@ $ curl --request POST \
   https://api.trader4.net/v1/trading-accounts \
   -d '{
     "name": "My Personal Account",
-    "broker": 1,
+    "broker": 15101,
     "company": "ICMarkets",
     "identity": "6598000312",
     "secret": "123456",
     "read_only_secret":"32165456",
+    "capital-road": true,
     "server": "ICMarkets-Demo",
     "link": "https://www.icmarkets.com/mt4/download/icmarketsdemo.exe"
   }'
@@ -101,32 +97,31 @@ $ curl --request POST \
 
 <template #result>
 
-
-- `name` <span>String</span>, The name of user.
-- `broker` <span>integer</span>, The type of broker.
+- `uuid` <span>String</span>, The id of trading account.
+- `name` <span>String</span>, The name of trading account.
+- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
-- `identity` <span>String</span>, The identity of user.
-- `secret` <span>String</span>.
-- `read_only_secret` <span>String</span>.
-- `trade_mode` <span>integer</span>.
-- `margin-type` <span>integer</span>.
-- `order_limit` <span>integer</span>.
-- `trade_allowed` <span>boolean</span>.
-- `hedge` <span>boolean</span>.
-- `capital-road` <span>boolean</span>.
-- `server` <span>String</span>the name of server.
-- `balance` <span>String</span>.
-- `credit` <span>String</span>.
-- `equity` <span>String</span>.
-- `currency` <span>Integer</span>.
-- `margin` <span>String</span>.
-- `free-margin` <span>String</span>.
-- `margin_level` <span>String</span>.
-- `leverage` <span>Integer</span>.
-- `stopout_level` <span>Integer</span>.
-- `market` <span>Integer</span>.
-- `report` <span>Integer</span>.
-- `status` <span>Integer</span>.
+- `identity` <span>String</span>, The identity of trading account.
+- `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
+- `margin_type` <span>integer</span> Check out [Margin Type Table](#margin-type-table).
+- `order_limit` <span>integer</span> The order limit of trading account.
+- `trade_allowed` <span>Boolean</span> Determines if the trading account is allowed to trade.
+- `hedge` <span>boolean</span> The hedge of trading account.
+- `capital_road` <span>Boolean</span> The capital road of trading account.
+- `server` <span>String</span> The name of server.
+- `link` <span>String</span> Link of trading account.
+- `currency` <span>String</span> Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+- `leverage` <span>Integer</span> The leverage of trading account.
+- `stopout_level` <span>Integer</span> The stopout level of trading account.
+- `market` <span>Integer</span> The market of trading account.
+- `report` <span>Integer</span> The report of trading account.
+- `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
+- `balance` <span>Integer</span> Balance of trading account.
+- `credit` <span>Integer</span> Credit of trading account.
+- `equity` <span>String</span> Equity of trading account.
+- `margin` <span>String</span> Margin of trading account.
+- `free_margin` <span>String</span> Free margin of trading account.
+- `margin_level` <span>String</span> Margin level of trading account.
 
 </template>
 
@@ -136,7 +131,7 @@ $ curl --request POST \
 
 # Read
 
-Using our show Method, users are now able to show information.
+Using our read Method, users are now able to see information of a trading account.
 
 <template #code>
 
@@ -153,32 +148,31 @@ $ curl --request GET \
 
 <template #result>
 
-
-- `name` <span>String</span>, The name of user.
-- `broker` <span>integer</span>, The type of broker.
+- `uuid` <span>String</span>, The id of trading account.
+- `name` <span>String</span>, The name of trading account.
+- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
-- `identity` <span>String</span>, The identity of user.
-- `secret` <span>String</span>.
-- `read_only_secret` <span>String</span>.
-- `trade_mode` <span>integer</span>.
-- `margin-type` <span>integer</span>.
-- `order_limit` <span>integer</span>.
-- `trade_allowed` <span>boolean</span>.
-- `hedge` <span>boolean</span>.
-- `capital-road` <span>boolean</span>.
-- `server` <span>String</span>the name of server.
-- `balance` <span>String</span>.
-- `credit` <span>String</span>.
-- `equity` <span>String</span>.
-- `currency` <span>Integer</span>.
-- `margin` <span>String</span>.
-- `free-margin` <span>String</span>.
-- `margin_level` <span>String</span>.
-- `leverage` <span>Integer</span>.
-- `stopout_level` <span>Integer</span>.
-- `market` <span>Integer</span>.
-- `report` <span>Integer</span>.
-- `status` <span>Integer</span>.
+- `identity` <span>String</span>, The identity of trading account.
+- `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
+- `margin_type` <span>integer</span> Check out [Margin Type Table](#margin-type-table).
+- `order_limit` <span>integer</span> The order limit of trading account.
+- `trade_allowed` <span>Boolean</span> Determines if the trading account is allowed to trade.
+- `hedge` <span>boolean</span> The hedge of trading account.
+- `capital_road` <span>Boolean</span> The capital road of trading account.
+- `server` <span>String</span> The name of server.
+- `link` <span>String</span> Link of trading account.
+- `currency` <span>String</span> Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+- `leverage` <span>Integer</span> The leverage of trading account.
+- `stopout_level` <span>Integer</span> The stopout level of trading account.
+- `market` <span>Integer</span> The market of trading account.
+- `report` <span>Integer</span> The report of trading account.
+- `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
+- `balance` <span>Integer</span> Balance of trading account.
+- `credit` <span>Integer</span> Credit of trading account.
+- `equity` <span>String</span> Equity of trading account.
+- `margin` <span>String</span> Margin of trading account.
+- `free_margin` <span>String</span> Free margin of trading account.
+- `margin_level` <span>String</span> Margin level of trading account.
 
 </template>
 
@@ -187,20 +181,21 @@ $ curl --request GET \
 <CodeBox lang="Restful" method="PUT" endpoint="/v1/trading-accounts">
 
 # Update
-Using our Update Method, users are now able to easily update their information.
+Using our Update Method, users are now able to easily update their trading accounts information.
 
 <!--@include: /partials/authorization.md-->
 
 <template #params>
 
-- `name` <span>String</span>, The first name of user.
-- `broker` <span>integer</span>, The type of broker.
+- `name` <span>String</span>, The name of trading account.
+- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
-- `identity` <span>String</span>, The identity of user.
-- `password` <span>String</span>, The password of user.
-- `server` <span>String</span>.
-- `link` <span>String</span>.
-- `capital-road` <span>String</span>.
+- `identity` <span>String</span>, The identity of trading account.
+- `secret` <span>String</span>, The secret of trading account.
+- `capital_road` <span>Boolean</span> The capital road of trading account.
+- `server` <span>String</span> The name of server.
+- `link` (optional) <span>String</span> Link of trading account.
+
 </template>
 
 <template #code>
@@ -209,13 +204,14 @@ Using our Update Method, users are now able to easily update their information.
 $ curl --request PUT \
   https://api.trader4.net/v1/trading-accounts \
     -d '{
-    "name": "johnDoe",
-    "broker": 1,
-    "company": "ekvan",
-    "identity": "identity",
-    "password": "123456",
-    "server": "server",
-    "link": "link",
+    "name": "My Personal Account",
+    "broker": 15101,
+    "company": "ICMarkets",
+    "identity": "6598000312",
+    "secret": "123456",
+    "capital-road": true,
+    "server": "ICMarkets-Demo",
+    "link": "https://www.icmarkets.com/mt4/download/icmarketsdemo.exe"
     
     }'
 ```
@@ -228,32 +224,31 @@ $ curl --request PUT \
 
 <template #result>
 
-- `name` <span>String</span>, The name of user.
-- `broker` <span>integer</span>, The type of broker.
+- `uuid` <span>String</span>, The id of trading account.
+- `name` <span>String</span>, The name of trading account.
+- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
-- `identity` <span>String</span>, The identity of user.
-- `secret` <span>String</span>.
-- `read_only_secret` <span>String</span>.
-- `trade_mode` <span>integer</span>.
-- `margin-type` <span>integer</span>.
-- `order_limit` <span>integer</span>.
-- `trade_allowed` <span>boolean</span>.
-- `hedge` <span>boolean</span>.
-- `capital-road` <span>boolean</span>.
-- `server` <span>String</span>the name of server.
-- `balance` <span>String</span>.
-- `credit` <span>String</span>.
-- `equity` <span>String</span>.
-- `currency` <span>Integer</span>.
-- `margin` <span>String</span>.
-- `free-margin` <span>String</span>.
-- `margin_level` <span>String</span>.
-- `leverage` <span>Integer</span>.
-- `stopout_level` <span>Integer</span>.
-- `market` <span>Integer</span>.
-- `report` <span>Integer</span>.
-- `status` <span>Integer</span>.
-
+- `identity` <span>String</span>, The identity of trading account.
+- `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
+- `margin_type` <span>integer</span> Check out [Margin Type Table](#margin-type-table).
+- `order_limit` <span>integer</span> The order limit of trading account.
+- `trade_allowed` <span>Boolean</span> Determines if the trading account is allowed to trade.
+- `hedge` <span>boolean</span> The hedge of trading account.
+- `capital_road` <span>Boolean</span> The capital road of trading account.
+- `server` <span>String</span> The name of server.
+- `link` <span>String</span> Link of trading account.
+- `currency` <span>String</span> Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+- `leverage` <span>Integer</span> The leverage of trading account.
+- `stopout_level` <span>Integer</span> The stopout level of trading account.
+- `market` <span>Integer</span> The market of trading account.
+- `report` <span>Integer</span> The report of trading account.
+- `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
+- `balance` <span>Integer</span> Balance of trading account.
+- `credit` <span>Integer</span> Credit of trading account.
+- `equity` <span>String</span> Equity of trading account.
+- `margin` <span>String</span> Margin of trading account.
+- `free_margin` <span>String</span> Free margin of trading account.
+- `margin_level` <span>String</span> Margin level of trading account.
 
 </template>
 
@@ -263,20 +258,15 @@ $ curl --request PUT \
 <CodeBox lang="Restful" method="DELETE" endpoint="/v1/trading-accounts/:id">
 
 # Delete
-Using our Delete Method, users are now able to easily delete their information.
+Using our Delete Method, users are now able to easily delete their trading accounts.
 
 <!--@include: /partials/authorization.md-->
-
-<template #params>
-
-
-</template>
 
 <template #code>
 
 ```bash
 $ curl --request DELETE \
-  https://api.trader4.net/v1/tradind-accounts/:id
+  https://api.trader4.net/v1/trading-accounts/:id
 ```
 
 </template>
@@ -293,3 +283,40 @@ $ curl --request DELETE \
 
 </Response>
 
+## Trading Account Status Table
+
+| CODE                    | CONSTANT                        | DESCRIPTION                                        |
+|-------------------------|---------------------------------|----------------------------------------------------|
+| <code>15001</code>      | <pre>registered</pre>           | Registered Trading Account.                        |
+| <code>15002</code>      | <pre>pending</pre>              | Pending Trading Account.                           |
+| <code>15003</code>      | <pre>active</pre>               | Active Trading Account.                            |
+| <code>15004</code>      | <pre>suspended</pre>            | Suspended Trading Account.                         |
+| <code>15005</code>      | <pre>closed</pre>               | Closed Trading Account.                            |
+| <code>15006</code>      | <pre>canceled</pre>             | Canceled Trading Account.                          |
+| <code>15007</code>      | <pre>deleted</pre>              | Deleted Trading Account.                           |
+| <code>15008</code>      | <pre>rejected</pre>             | Rejected Trading Account.                          |
+| <code>15009</code>      | <pre>pending_deletion</pre>     | Pending Deletion Trading Account.                  |
+| <code>15010</code>      | <pre>pending_cancellation</pre> | Pending Cancellation Trading Account.              |
+| <code>15011</code>      | <pre>pending_suspension</pre>   | Pending Suspension Trading Account.                |
+| <code>15012</code>      | <pre>pending_activation</pre>   | Pending Activation Trading Account.                |
+
+
+## Brokers Table
+
+| CODE                    | CONSTANT                | DESCRIPTION                                       |
+|-------------------------|-------------------------|---------------------------------------------------|
+| <code>15101</code>      | <pre>forex</pre>        | Forex Broker.                                     |
+
+
+## Trade Mode Table
+
+| CODE                    | CONSTANT                | DESCRIPTION                                       |
+|-------------------------|-------------------------|---------------------------------------------------|
+| <code>15201</code>      | <pre>default</pre>      | Default trading mode.                             |
+
+
+## Margin Type Table
+
+| CODE                    | CONSTANT                | DESCRIPTION                                      |
+|-------------------------|-------------------------|--------------------------------------------------|
+| <code>15301</code>      | <pre>default</pre>      | Default margin type.                             |
