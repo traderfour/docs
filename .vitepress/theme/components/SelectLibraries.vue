@@ -3,6 +3,7 @@
     class="my-5 grid gap-6 md:grid-cols-2 grid-cols-1 items-center"
     :style="dir === 'rtl' ? 'direction:rtl' : ''"
   >
+  <ClientOnly>
     <div class="col-span-1">
       <slot />
     </div>
@@ -79,6 +80,7 @@
         </div>
       </div>
     </div>
+  </ClientOnly>
   </div>
 </template>
 <script>

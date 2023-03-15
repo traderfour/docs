@@ -64,21 +64,8 @@ export default {
       if (router.route.path === "/") {
         await router.go("/en/");
       }
-      console.log(router.route.path);
       hideIndexPage();
     });
-    /* watch(
-      () => router.route.path,
-      (path) => {
-        hideIndexPage();
-        setTimeout(() => {
-          if (router.route.path !== "/en/") {
-            const VPHome = document.querySelector(".VPHome");
-            VPHome?.classList.add("hidden");
-          }
-        }, 10);
-      }
-    ); */
 
     // BEGIN: Hide index page for Hydration completed but contains mismatches. ERROR
     const hideIndexPage = () => {
