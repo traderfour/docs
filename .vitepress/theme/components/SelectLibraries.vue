@@ -59,7 +59,7 @@
                   class="!text-gray-600 decoration-none !dark:text-white text-sm mx-1"
                   >Github</a
                 >
-                <div v-if="isSupported" class="mt-1">
+               <!--  <div v-if="isSupported" class="mt-1">
                   <button @click="copy(libraries[openTab].code)">
                     <span v-if="!copied"
                       ><Tooltip class="mt-2" tooltip-text="Copy">
@@ -72,7 +72,7 @@
                     /></span>
                   </button>
                 </div>
-                <p v-else class="text-xs">Not Support Clipboard API</p>
+                <p v-else class="text-xs">Not Support Clipboard API</p> -->
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default {
   setup(props, { slots }) {
     const router = useRouter();
     const { dir } = useData();
-    const { copy, copied, isSupported } = useClipboard();
+    // const { copy, copied, isSupported } = useClipboard();
 
     const openTab = ref(0);
     const index = ref(0);
@@ -151,9 +151,9 @@ export default {
       openTab,
       toggleTabs,
       index,
-      copy,
-      copied,
-      isSupported,
+      // copy,
+      // copied,
+      // isSupported,
     };
   },
 };
