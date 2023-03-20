@@ -36,7 +36,8 @@ $ curl --request GET \
 - `view` <span>Integer</span>, Views.
 - `purchases` <span>Integer</span>, purchases.
 - `likes` <span>Integer</span>, likes.
-- `status` <span>Integer</span>status.
+- `type` <span>Integer</span> type.
+- `status` <span>Integer</span> status.
 
 </template>
 
@@ -48,16 +49,15 @@ $ curl --request GET \
 
 Using our store Method, users are now able to easily store their product information.
 
-
 <template #params>
 
 - `title` <span>String</span>, the title of product.
 - `slogan` <span>String</span>, slogan.
 - `introduction` <span>String</span>, introduction of the product.
 - `description` <span>String</span>, description of the product.
-- `tags[0]` <span>Array</span>, product tags.
-- `platforms[0]` <span>Array</span>, platforms of product.
-- `categories[1]` <span>Array</span>, categorires of product.
+- `tags` <span>String</span>, tag ids separated by ','.
+- `platforms` <span>String</span>, platform ids separated by ','.
+- `categories` <span>String</span>, categoriry ids separated by ','.
 - `type` <span>Integer</span>, type of product.
 
 </template>
@@ -72,10 +72,10 @@ $ curl --request POST \
         "slogan": "this is test",
         "introduction": "detail of product",
         "description": "this is description of product",
-        tags[0]:989d91a8-a150-482d-b0e6-37c73087bf66,
-        platform[0]:989d9374-bfd9-4d72-b0da-90c8e24e4655,
-        categories[1]:989d91a8-a031-414b-9516-162f04701293,
-        type:1
+        "tags": "989d91a8-a150-482d-b0e6-37c73087bf66,f7c1bd87-4da5-4709-9471-3d60c8a70639",
+        "platform": "989d9374-bfd9-4d72-b0da-90c8e24e4655",
+        "categories": "989d91a8-a031-414b-9516-162f04701293",
+        "type": 1
   }'
 ```
 
@@ -96,7 +96,8 @@ $ curl --request POST \
 - `view` <span>Integer</span>, Views.
 - `purchases` <span>Integer</span>, purchases.
 - `likes` <span>Integer</span>, likes.
-- `status` <span>Integer</span>status.
+- `type` <span>Integer</span> type.
+- `status` <span>Integer</span> status.
 
 
 </template>
@@ -119,10 +120,9 @@ $ curl --request PUT \
   https://api.trader4.net/v1/products
   -d '{
        "title": "first product2",
-       "slogan":"test2",
-       "introduction":test2",
-       "description":"test2"
-      
+       "slogan": "test2",
+       "introduction": "test2",
+       "description": "test2"
        }'
 ```
 
@@ -143,13 +143,12 @@ $ curl --request PUT \
 - `view` <span>Integer</span>, Views.
 - `purchases` <span>Integer</span>, purchases.
 - `likes` <span>Integer</span>, likes.
-- `status` <span>Integer</span>status.
+- `type` <span>Integer</span> type.
+- `status` <span>Integer</span> status.
 
 </template>
 
 </Response>
-
-
 
 <CodeBox lang="Restful" method="DELETE" endpoint="/v1/products">
 
@@ -276,7 +275,36 @@ $ curl --request GET \
 
 </CodeBox>
 
-<Response jfile="v1/marketPlace/get" >
+<Response jfile="v1/marketPlace/categories/get" >
+<template #result>
+
+- `id` <span>String</span>, The id of tag.
+- `title` <span>String</span>, The title of tag.
+- `slug` <span>String</span>, The slug of tag.
+- `type` <span>String</span>, The type of tag.
+
+</template>
+
+</Response>
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/products/tag/{tagName}">
+
+# Products with specific tag
+
+Get list products with specific tag
+
+<template #code>
+
+```bash
+$ curl --request GET \
+ https://api.trader4.net/v1/tags/{tagID}/products
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/marketPlace/tags/products" >
 
 <template #result>
 
@@ -289,17 +317,18 @@ $ curl --request GET \
 - `view` <span>Integer</span>, Views.
 - `purchases` <span>Integer</span>, purchases.
 - `likes` <span>Integer</span>, likes.
-- `status` <span>Integer</span>status.
+- `type` <span>Integer</span> type.
+- `status` <span>Integer</span> status.
 
 </template>
 
 </Response>
 
-
-
-<CodeBox lang="Restful" method="GET" endpoint="/v1/products/platforms/{platformName}">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/platforms/{platformID}/products">
 
 # Platforms
+
+Get list platforms
 
 <!--@include: /partials/authorization.md-->
 
@@ -307,14 +336,45 @@ $ curl --request GET \
 
 ```bash
 $ curl --request GET \
- https://api.trader4.net/v1/products/platforms/{platformName}
+ https://api.trader4.net/v1/platforms
 ```
 
 </template>
 
 </CodeBox>
 
-<Response jfile="v1/marketPlace/get" >
+<Response jfile="v1/marketPlace/platforms/get" >
+
+<template #result>
+
+- `id` <span>String</span>, The id of platform.
+- `title` <span>String</span>, The title of platform.
+- `slug` <span>String</span>, The slug of platform.
+
+</template>
+
+</Response>
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/platforms/{platformID}/products">
+
+# Products with specific platform
+
+Get list products with specific platform
+
+<!--@include: /partials/authorization.md-->
+
+<template #code>
+
+```bash
+$ curl --request GET \
+ https://api.trader4.net/v1/platforms/{platformID}/products
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/marketPlace/platforms/products" >
 
 <template #result>
 
@@ -333,7 +393,8 @@ $ curl --request GET \
 
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/products/related/{productName}">
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/products/{productID}/related">
 
 # Related
 
@@ -343,7 +404,7 @@ $ curl --request GET \
 
 ```bash
 $ curl --request GET \
- https://api.trader4.net/v1/products/related/{productName}
+ https://api.trader4.net/v1/products/{productID}/related
 ```
 
 </template>
@@ -363,14 +424,9 @@ $ curl --request GET \
 - `view` <span>Integer</span>, Views.
 - `purchases` <span>Integer</span>, purchases.
 - `likes` <span>Integer</span>, likes.
-- `status` <span>Integer</span>status.
+- `type` <span>Integer</span> type.
+- `status` <span>Integer</span> status.
 
 </template>
 
 </Response>
-
-
-
-
-
-

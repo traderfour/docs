@@ -51,7 +51,6 @@ $ curl --request GET \
 
 Using our Update Account Method, users are now able to easily update their account information.
 
-
 <template #params>
 
 - `first_name` <span>String</span>, The first name of user.
@@ -418,3 +417,41 @@ $ curl --request PUT \
 | <code>11203</code>      | <pre>bi_weekly</pre>    | Auto withdraw once every two weeks.                |
 | <code>11204</code>      | <pre>monthly</pre>      | Auto withdraw once a month.                        |
 | <code>11205</code>      | <pre>yearly</pre>       | Auto withdraw once a year.                         |
+
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/account/security">
+
+# Products
+
+Return User products
+
+<template #code>
+
+```bash
+$ curl --request GET \
+ https://api.trader4.net/v1/account/products
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/user/products" >
+
+<template #result>
+
+- `title` <span>String</span>, The title of product.
+- `slogan` <span>String</span>.
+- `introduction` <span>String</span>, The introduction of product.
+- `description` <span>String</span>, The description  of product.
+- `logo` <span>String</span>, The logo of product.
+- `downloads` <span>Integer</span>,  downloads.
+- `view` <span>Integer</span>, Views.
+- `purchases` <span>Integer</span>, purchases.
+- `likes` <span>Integer</span>, likes.
+- `type` <span>Integer</span> type.
+- `status` <span>Integer</span> status.
+
+</template>
+
+</Response>
