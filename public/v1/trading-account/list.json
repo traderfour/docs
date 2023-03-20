@@ -1,0 +1,28 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": [
+    {
+      "uuid": "98ac3c6c-6773-41d2-8d23-c48eda98b5e1",
+      "name": "test name",
+      "broker": 15101,
+      "company": "test company",
+      "identity": "8946511845611",
+      "trade_mode": 15201,
+      "margin_type": 15301,
+      "order_limit": 200,
+      "trade_allowed": true,
+      "hedge": true,
+      "capital_road": false,
+      "server": "test server",
+      "link": "https://www.icmarkets.com/mt4/download/icmarketsdemo.exe",
+      "currency": null,
+      "leverage": null,
+      "stopout_level": null,
+      "market": null,
+      "report": 0,
+      "status": 15001
+    }
+  ],
+  "metas": []
+}
