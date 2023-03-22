@@ -1,0 +1,32 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": {
+      "uuid": "98ac3cf1-c7c4-43f0-aa0c-b7a09a8160b1",
+      "name": "test name 2",
+      "broker": 15101,
+      "company": "test company 2",
+      "identity": "8946511845611",
+      "trade_mode": 15201,
+      "margin_type": 15301,
+      "order_limit": 200,
+      "trade_allowed": true,
+      "hedge": true,
+      "capital_road": false,
+      "server": "test server 2",
+      "link": "https://www.example.com/mt4/download/example.exe",
+      "currency": null,
+      "leverage": null,
+      "stopout_level": null,
+      "market": null,
+      "report": 0,
+      "status": 15001,
+      "balance": null,
+      "credit": null,
+      "equity": null,
+      "margin": null,
+      "free_margin": null,
+      "margin_level": null
+    },
+  "metas": []
+}

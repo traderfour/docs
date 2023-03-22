@@ -193,3 +193,22 @@ $ curl --request POST \
 </template>
 
 </Response>
+
+
+
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/oauth/google">
+
+# Google SSO
+
+
+<template #code>
+
+```bash
+$ curl --request GET \
+  https://api.trader4.net/v1/oauth/google
+```
+
+</template>
+
+</CodeBox>
