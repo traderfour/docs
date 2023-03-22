@@ -122,8 +122,14 @@ export const en: DefaultTheme.Sidebar = {
           link: "/en/api/trading-account",
         },
         {
-          text: "Market",
-          link: "/en/api/market",
+          text: "General",
+          link: "/en/api/general",
+          items: [
+            {
+              text: "Market",
+              link: "/en/api/general/market"
+            },
+          ]
         },
         {
           text: "Finance",
