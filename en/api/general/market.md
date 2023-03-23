@@ -86,7 +86,7 @@ $ curl --request GET \
 </Response>
 
 ### Status Codes
-| CODE               | CONSTANT            | DESCRIPTION                                      |
-|--------------------|---------------------|--------------------------------------------------|
-| <code>12100</code> | <pre>ACTIVE</pre>   | The purse is active and have full functionality. |
-| <code>12101</code> | <pre>INACTIVE</pre> | The purse is inactive and just can read data.    |
+| CODE               | CONSTANT            | DESCRIPTION                                       |
+|--------------------|---------------------|---------------------------------------------------|
+| <code>11300</code> | <pre>ACTIVE</pre>   | The market is active and have full functionality. |
+| <code>11301</code> | <pre>INACTIVE</pre> | The market is inactive and just can read data.    |
