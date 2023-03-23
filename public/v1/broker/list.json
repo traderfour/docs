@@ -1,0 +1,131 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": [
+    {
+      "id": "98gdc2a2-4251-4619-9bb6-3905d22ber39",
+      "market_id": "98bf54d4-9e89-4577-9a4f-0ad30c1c9fb7",
+      "name": "test name",
+      "logo": null,
+      "website": null,
+      "description": "test description",
+      "is_dealing_desk": true,
+      "is_stp": false,
+      "is_ecn": false,
+      "is_market_maker": true,
+      "is_ndd": false,
+      "is_dma": false,
+      "is_prime_of_prime": false,
+      "country": "USA,GBR",
+      "offices": [
+        {
+          "country": "USA",
+          "city": "New York City",
+          "address": "test address",
+          "phones": [
+            "1556225845",
+            "1556225846"
+          ]
+        },
+        {
+          "country": "USA",
+          "city": "Washington, D.C.",
+          "address": "test address",
+          "phones": [
+            "1556225850",
+            "1556225851"
+          ]
+        }
+      ],
+      "regulations": [
+        "NFA",
+        "FCA"
+      ],
+      "us_clients": true,
+      "account_currencies": "USD,GBP",
+      "funding_methods": [
+        {
+          "currency": "EUR",
+          "fee": {
+            "deposit": 0,
+            "withdraw": 1.5
+          },
+          "processing_time": {
+            "deposit": "up to 3 days",
+            "withdraw": "up to 3 days"
+          },
+          "limitations": {
+            "deposit": "500 - 100,000 EUR",
+            "withdraw": "500 - 49,990 EUR"
+          }
+        }
+      ],
+      "withdrawal_methods": {
+        "currency": "EUR",
+        "fee": {
+          "deposit": 0,
+          "withdraw": 1.5
+        },
+        "processing_time": {
+          "deposit": "up to 3 days",
+          "withdraw": "up to 3 days"
+        },
+        "limitations": {
+          "deposit": "500 - 100,000 EUR",
+          "withdraw": "500 - 49,990 EUR"
+        }
+      },
+      "has_swap_free": false,
+      "has_demo_account": false,
+      "has_segregated_account": true,
+      "interest_on_margin": false,
+      "has_managed_account": false,
+      "money_managers": [],
+      "phone": "4485651355",
+      "fax": "448562652225",
+      "email": "test@traser4.net",
+      "languages": "en,de",
+      "availability": {
+        "skype": [
+          "448562652225",
+          "4485651355"
+        ],
+        "whatsapp": [
+          "448562652225",
+          "4485651355"
+        ]
+      },
+      "has_mobile_trading": true,
+      "has_web_trading": true,
+      "has_api": false,
+      "has_socket": false,
+      "has_oco_orders": false,
+      "allow_hedge": false,
+      "has_trailing_stops": true,
+      "has_one_click_trading": true,
+      "has_bonus": false,
+      "has_contests": false,
+      "has_stocks": false,
+      "has_options": false,
+      "has_futures": false,
+      "has_indices": false,
+      "has_commodities": false,
+      "has_energies": false,
+      "has_shares": true,
+      "has_spread_betting": false,
+      "has_cfd": false,
+      "has_cryptocurrencies": false,
+      "minimum_deposit": [],
+      "maximal_leverage": [],
+      "minimum_lot_size": [],
+      "maximal_lot_size": [],
+      "commission": [],
+      "spread": 11500,
+      "five_decimals": false,
+      "allow_scalping": true,
+      "allow_super_scalping": false,
+      "status": 11400
+    }
+  ],
+  "metas": []
+}
