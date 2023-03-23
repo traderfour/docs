@@ -42,13 +42,15 @@
           "registered_company": "Admiral Markets AS Jordan Ltd",
           "registered_office": "first floor, Time Centre Building, Eritrea Street, Um Uthaina, Amman, Jordan",
           "license": "57026",
-          "description": ""
+          "company_registered_number":"85275",
+          "description": "test description"
         },
         "FCA": {
           "registered_company": "Admiral Markets UK Ltd",
           "registered_office": "37th Floor, One Canada Square, Canary Wharf, London, E14 5AB, United Kingdom.",
           "license": "595450",
-          "description": ""
+          "company_registered_number":"98564",
+          "description": "test description"
         }
       },
       "us_clients": true,
@@ -62,7 +64,8 @@
           },
           "processing_time": {
             "deposit": 72,
-            "withdraw": 72
+            "withdraw": 72,
+            "description": "hours"
           },
           "limitations": {
             "deposit": {
@@ -85,7 +88,8 @@
           },
           "processing_time": {
             "deposit": 72,
-            "withdraw": 72
+            "withdraw": 72,
+            "description": "hours"
           },
           "limitations": {
             "deposit": {
@@ -105,12 +109,12 @@
       "interest_on_margin": false,
       "has_managed_account": false,
       "money_managers": {
-        "PAMM": "description",
-        "MAM": "description",
-        "RAMM": "description",
-        "MAMM": "description",
-        "COPYTRADE": "description",
-        "SOCIALTRADE": "description"
+        "PAMM": "test description",
+        "MAM": "test description",
+        "RAMM": "test description",
+        "MAMM": "test description",
+        "COPYTRADE": "test description",
+        "SOCIALTRADE": "test description"
       },
       "phone": "4485651355",
       "fax": "448562652225",
