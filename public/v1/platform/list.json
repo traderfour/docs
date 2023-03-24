@@ -18,14 +18,14 @@
       "permissions": [
         {
           "title": "Auto Trading",
-          "code": 116012,
+          "code": 11700,
           "description": "Platform can be open, modify, and close trades full automatically."
         }
       ],
       "oss": [
         {
           "title": "Microsoft Windows",
-          "code": 11702,
+          "code": 12100,
           "file": "https://example.org/metatrader4.exe",
           "compatibility": "7",
           "license": "MIT",
