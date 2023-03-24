@@ -133,6 +133,10 @@ export const en: DefaultTheme.Sidebar = {
               text: "Broker",
               link: "/en/api/general/broker"
             },
+            {
+              text: "Platform",
+              link: "/en/api/general/platform"
+            },
           ]
         },
         {

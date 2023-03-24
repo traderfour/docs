@@ -2,7 +2,7 @@
 aside: false
 ---
 
-<!--@include: ..//partials/libraries.md-->
+<!--@include: ../partials/libraries.md-->
 
 <CodeBox lang="Restful" method="GET" endpoint="/v1/general/markets">
 
@@ -14,7 +14,7 @@ Using our market list Method, users are now able to easily retrieve markets list
 
 <template #params>
 
-- `name` (optional) <span>String</span>, Filter by gateway name.
+- `name` (optional) <span>String</span>, Filter by market name.
 - `status` (optional) <span>Integer</span>, Filter by status code. Check out [Status Codes](#status-codes).
 - `parent_id` (optional) <span>String</span>, Filter by parent id.
 - `sort` (optional) <span>String</span>, sort markets.
@@ -81,6 +81,33 @@ $ curl --request GET \
 - `status` <span>Integer</span> The status of market. Check out [Status Codes](#status-codes).
 - `parent_id` <span>String</span> ID of parent market.
 - `children` <span>Array of JSON Objects</span> child markets.
+
+</template>
+</Response>
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/markets/{id}/platforms">
+
+# Platforms List
+
+Using our platforms list method, users are now able to easily retrieve platforms of a market.
+
+<!--@include: /partials/authorization.md-->
+
+<template #code>
+
+```bash
+$ curl --request GET \
+  https://api.trader4.net/v1/general/markets/{id}/platforms
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/platform/list" >
+<template #result>
+
+- Platforms of market. Check out [Platforms List](https://next-docs.trader4.net/en/api/general/platform?lang=restful&pos=0#list).
 
 </template>
 </Response>

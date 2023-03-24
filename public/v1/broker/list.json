@@ -38,8 +38,22 @@
         }
       ],
       "regulations": [
-        "NFA",
-        "FCA"
+        {
+          "name": "JSC",
+          "registered_company": "Admiral Markets AS Jordan Ltd",
+          "registered_office": "first floor, Time Centre Building, Eritrea Street, Um Uthaina, Amman, Jordan",
+          "license": "57026",
+          "company_registered_number":"85275",
+          "description": "test description"
+        },
+        {
+          "name": "FCA",
+          "registered_company": "Admiral Markets UK Ltd",
+          "registered_office": "37th Floor, One Canada Square, Canary Wharf, London, E14 5AB, United Kingdom.",
+          "license": "595450",
+          "company_registered_number":"98564",
+          "description": "test description"
+        }
       ],
       "us_clients": true,
       "account_currencies": "USD,GBP",
@@ -48,53 +62,92 @@
           "currency": "EUR",
           "fee": {
             "deposit": 0,
-            "withdraw": 1.5
+            "calculation_mode": "percentage"
           },
           "processing_time": {
-            "deposit": "up to 3 days",
-            "withdraw": "up to 3 days"
+            "deposit": 72,
+            "calculation_mode": "hours"
           },
           "limitations": {
-            "deposit": "500 - 100,000 EUR",
-            "withdraw": "500 - 49,990 EUR"
+            "deposit": {
+              "min": 500,
+              "max": 100000,
+              "calculation_mode": "EUR"
+            }
           }
         }
       ],
-      "withdrawal_methods": {
-        "currency": "EUR",
-        "fee": {
-          "deposit": 0,
-          "withdraw": 1.5
-        },
-        "processing_time": {
-          "deposit": "up to 3 days",
-          "withdraw": "up to 3 days"
-        },
-        "limitations": {
-          "deposit": "500 - 100,000 EUR",
-          "withdraw": "500 - 49,990 EUR"
+      "withdrawal_methods": [
+        {
+          "currency": "EUR",
+          "fee": {
+            "withdraw": 1.5,
+            "calculation_mode": "percentage"
+          },
+          "processing_time": {
+            "withdraw": 72,
+            "calculation_mode": "hours"
+          },
+          "limitations": {
+            "withdraw": {
+              "min": 500,
+              "max": 49990,
+              "calculation_mode": "EUR"
+            }
+          }
         }
-      },
+      ],
       "has_swap_free": false,
       "has_demo_account": false,
       "has_segregated_account": true,
       "interest_on_margin": false,
       "has_managed_account": false,
-      "money_managers": [],
+      "money_managers": [
+        {
+          "name": "PAMM",
+          "description": "test description"
+        },
+        {
+          "name": "MAM",
+          "description": "test description"
+        },
+        {
+          "name": "RAMM",
+          "description": "test description"
+        },
+        {
+          "name": "MAMM",
+          "description": "test description"
+        },
+        {
+          "name": "COPY_TRADE",
+          "description": "test description"
+        },
+        {
+          "name": "SOCIAL_TRADE",
+          "description": "test description"
+        }
+      ],
       "phone": "4485651355",
       "fax": "448562652225",
       "email": "test@traser4.net",
-      "languages": "en,de",
-      "availability": {
-        "skype": [
-          "448562652225",
-          "4485651355"
-        ],
-        "whatsapp": [
-          "448562652225",
-          "4485651355"
-        ]
-      },
+      "languages": "en-US",
+      "availability": [
+        {
+          "name": "skype",
+          "numbers": [
+            "448562652225",
+            "4485651355"
+          ]
+        },
+        {
+          "name": "whatsapp",
+          "numbers": [
+            "448562652225",
+            "4485651355"
+          ]
+        }
+      ],
       "has_mobile_trading": true,
       "has_web_trading": true,
       "has_api": false,
