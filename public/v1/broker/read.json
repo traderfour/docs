@@ -176,7 +176,42 @@
     "five_decimals": false,
     "allow_scalping": true,
     "allow_super_scalping": false,
-    "status": 11400
+    "status": 11400,
+    "platforms": [
+      {
+        "id": "98c3828c-2bb8-4fe2-b280-f8a5b4b3446f",
+        "title": "FXTrade/FXGame",
+        "slug": null,
+        "icon": null,
+        "cover": null,
+        "description": null,
+        "content": null,
+        "url": null,
+        "email": null,
+        "privacy_policy": null,
+        "terms_of_use": null,
+        "address": null,
+        "permissions": [
+          {
+            "title": "Auto Trading",
+            "code": 116012,
+            "description": "Platform can be open, modify, and close trades full automatically."
+          }
+        ],
+        "oss": [
+          {
+            "title": "Microsoft Windows",
+            "code": 11702,
+            "file": "https://example.org/metatrader4.exe",
+            "compatibility": "7",
+            "license": "MIT",
+            "website": "https://metatrader4.net/windows/",
+            "change_log": "https://metatrader4.net/windows/change-log"
+          }
+        ],
+        "status": 11600
+      }
+    ]
   },
   "metas": []
 }

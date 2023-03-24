@@ -318,6 +318,34 @@ $ curl --request GET \
 - `commission` <span>Array of JSON Objects</span>, commission.
 - `status` <span>Integer</span>, status code. Check out [Status Codes](#status-codes).
 - `spread` <span>Integer</span>, spread code. Check out [Spread Codes](#spread-codes).
+- `platforms` <span>Array of JSON Objects</span>, platforms of broker. Check out [Platforms List](https://next-docs.trader4.net/en/api/general/platform?lang=restful&pos=0#list).
+
+</template>
+</Response>
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/{id}/platforms">
+
+# Platforms List
+
+Using our platforms list method, users are now able to easily retrieve platforms of a broker.
+
+<!--@include: /partials/authorization.md-->
+
+<template #code>
+
+```bash
+$ curl --request GET \
+  https://api.trader4.net/v1/general/brokers/{id}/platforms
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/platform/list" >
+<template #result>
+
+- Platforms of broker. Check out [Platforms List](https://next-docs.trader4.net/en/api/general/platform?lang=restful&pos=0#list).
 
 </template>
 </Response>
