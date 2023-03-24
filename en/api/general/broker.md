@@ -350,7 +350,7 @@ $ curl --request GET \
 </template>
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/regulations">
 
 # Regulations List
 
@@ -362,7 +362,7 @@ Using our Regulations list Method, users are now able to easily retrieve Regulat
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/brokers
+  https://api.trader4.net/v1/general/brokers/regulations
 ```
 
 </template>
