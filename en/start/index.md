@@ -6,9 +6,9 @@ sitemap:
     priority: 0.8
 ---
 
-# Usage
+# Start
 
-## As a dev dependency use
+## 5 minutes to get started
 
 > Just three simple steps:
 

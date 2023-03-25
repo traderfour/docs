@@ -1,9 +1,7 @@
 import { defineConfig } from "vitepress";
 import { generateSitemap, rebuildPWA } from "../build";
 import {
-  baiduVerify,
   github,
-  googleVerify,
   keywords,
   name,
   ogTitle,
@@ -20,8 +18,8 @@ export const shareConfig = defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     logo: {
-      src: "/images/trader 4-H.svg",
-      alt: "Trader4 Docs-logo",
+      src: "/images/logo.svg",
+      alt: "Trader4 Docs",
     },
     socialLinks: [{ icon: "github", link: github }],
   },
@@ -55,13 +53,11 @@ export const shareConfig = defineConfig({
   },
 
   head: [
-    ["meta", { name: "google-site-verification", content: googleVerify }],
-    ["meta", { name: "baidu-site-verification", content: baiduVerify }],
     ["meta", { name: "keywords", content: keywords }],
-    ["meta", { name: "author", content: "Zhengqbbb" }],
+    ["meta", { name: "author", content: "Trader4.net" }],
     ["meta", { name: "twitter:title", content: ogTitle }],
-    ["meta", { name: "twitter:creator", content: "@zhengqbbb" }],
-    ["meta", { name: "twitter:site", content: "@zhengqbbb" }],
+    ["meta", { name: "twitter:creator", content: "@trader4_net" }],
+    ["meta", { name: "twitter:site", content: "@trader4_net" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { property: "og:type", content: "article" }],
     ["meta", { name: "application-name", content: name }],

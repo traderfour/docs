@@ -3,7 +3,19 @@ import type { DefaultTheme } from "vitepress";
 export const en: DefaultTheme.Sidebar = {
   "/": [
     {
-      text: "Products",
+        text: "📚 Start Here",
+        collapsible: true,
+        collapsed: false,
+        link: "/en/start/",
+        items: [
+            {
+                text: "📖 Get Started",
+                link: "/en/start/get-started",
+            },
+          ]
+    },
+    {
+      text: "📊 Products",
       collapsible: true,
       collapsed: true,
       link: "/en/products/",
@@ -84,7 +96,7 @@ export const en: DefaultTheme.Sidebar = {
       ],
     },
     {
-      text: "SDKs",
+      text: "👨‍💻 SDKs",
       collapsible: true,
       collapsed: true,
       link: "/en/sdks/",
@@ -100,68 +112,68 @@ export const en: DefaultTheme.Sidebar = {
       ]
     },
     {
-      text: "Rest APIs",
+      text: "🤖 Rest APIs",
       collapsible: true,
       collapsed: true,
-      link: "/en/api/",
+      link: "/en/apis/",
       items: [
         {
           text: "oAuth",
-          link: "/en/api/oauth",
+          link: "/en/apis/oauth",
         },
         {
           text: "Account",
-          link: "/en/api/account",
+          link: "/en/apis/account",
         },
         {
           text: "Category",
-          link: "/en/api/category",
+          link: "/en/apis/category",
         },
         {
           text: "Trading Account",
-          link: "/en/api/trading-account",
+          link: "/en/apis/trading-account",
         },
         {
           text: "General",
-          link: "/en/api/general",
+          link: "/en/apis/general",
           items: [
             {
               text: "Market",
-              link: "/en/api/general/market"
+              link: "/en/apis/general/market"
             },
             {
               text: "Broker",
-              link: "/en/api/general/broker"
+              link: "/en/apis/general/broker"
             },
             {
               text: "Platform",
-              link: "/en/api/general/platform"
+              link: "/en/apis/general/platform"
             },
           ]
         },
         {
           text: "Finance",
-          link: "/en/api/trader4/finance",
+          link: "/en/apis/trader4/finance",
         },
         {
           text: "Marketplace",
-          link: "/en/api/marketplace",
+          link: "/en/apis/marketplace",
         },
         {
           text: "Cloud",
-          link: "/en/api/trader4/cloud",
+          link: "/en/apis/trader4/cloud",
         },
         {
           text: "Bazaar (Social Trading)",
-          link: "/en/api/trader4/bazaar",
+          link: "/en/apis/trader4/bazaar",
         },
         {
           text: "Financial Engineering",
-          link: "/en/api/trader4/financial-engineering",
+          link: "/en/apis/trader4/financial-engineering",
         },
         {
           text: "Capital Road (Funded)",
-          link: "/en/api/trader4/capital-road",
+          link: "/en/apis/trader4/capital-road",
         }
       ],
     },
