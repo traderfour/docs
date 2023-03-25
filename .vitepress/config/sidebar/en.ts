@@ -49,8 +49,8 @@ export const en: DefaultTheme.Sidebar = {
           link: "/en/products/darren",
         },
         {
-          text: "👨‍💻 Jadi <small>(License System)</small>",
-          link: "/en/products/jadi",
+          text: "👨‍💻 License System <small>(Jadi)</small>",
+          link: "/en/products/license-system",
         },
         {
           text: "👨‍🔬 Algo Dispenza",
