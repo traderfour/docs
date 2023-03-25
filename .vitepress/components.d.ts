@@ -9,7 +9,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CodeBox: typeof import('./theme/components/CodeBox.vue')['default']
     CodeGroupItem: typeof import('./theme/components/CodeGroupItem.vue')['default']
-    HomePage: typeof import('./theme/components/HomePage.vue')['default']
     Response: typeof import('./theme/components/Response.vue')['default']
     ResponseData: typeof import('./theme/components/ResponseData.vue')['default']
     SelectLibraries: typeof import('./theme/components/SelectLibraries.vue')['default']

@@ -1,30 +1,22 @@
 /** basic site info */
 export const name = "Trader4 Docs";
-export const site = "https://cz-git.qbb.sh";
-export const siteCN = "https://cz-git.qbb.sh/zh/";
-export const logo = "https://cz-git.qbb.sh/images/logo.png";
+export const site = "https://docs.trader4.net";
+export const logo = "https://docs.trader4.net/images/logo.svg";
 export const keywords =
-  "Trader4 Docs, czg, API, commitizen, commitizen cli,commitizen adapter, git-cz";
+  "Trader4 Docs, Trader4, API, trading, crypto api,forex api";
 export const descriptionEN =
-  "More engineered, lightweight, customizable, standard output format commitizen adapter and API.";
-export const descriptionCN =
-  "工程性更强，轻量级，高度自定义，输出标准格式的 commitizen 适配器与 git commit 命令行工具。";
+  "Deep Documentation and Tutorials for Trader4 API";
 
 /** social links */
-export const ogTitle = "Trader4 Docs - commitizen adapter and API";
-export const ogImg = "https://cz-git.qbb.sh/images/og.png";
-export const ogImgCN = "https://cz-git.qbb.sh/images/og-zh.png";
-export const github = "https://github.com/Zhengqbbb/cz-git";
-export const npm = "https://www.npmjs.com/package/cz-git";
-export const twitter = "https://twitter.com/zhengqbbb";
+export const ogTitle = "Trader4 Docs - Deep Documentation and Tutorials";
+export const ogImg = "https://docs.trader4.net/images/logo.svg";
+export const github = "https://github.com/traderfour/docs/";
+export const npm = "https://www.npmjs.com/org/traderfour";
+export const twitter = "https://twitter.com/trader4_net";
 
 /** package info */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 export const version = 1;
-
-/** site search console  */
-export const googleVerify = "j6cNWewUj3QcJBpdv48t67XoDxdlKPQ6dwKgXg9Nigo";
-export const baiduVerify = "code-GZMUSi21Xe";
 
 /* PWA runtime caching urlPattern regular expressions */
 /* eslint-disable prefer-regex-literals */

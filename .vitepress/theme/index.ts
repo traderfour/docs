@@ -9,7 +9,6 @@ import "./style/tooltip.css";
 import "uno.css";
 
 import { createMediumZoomProvider } from "./components/composables";
-import HomePage from "./components/HomePage.vue";
 import CodeGroupItem from "./components/CodeGroupItem.vue";
 import Response from "./components/Response.vue";
 import SelectLibraries from "./components/SelectLibraries.vue";
@@ -28,9 +27,6 @@ export default {
       {
         class: useData().dir.value === "rtl" ? "rtl" : "",
       },
-      {
-        "home-features-after": () => h(HomePage),
-      }
     );
   },
   enhanceApp({ app, router }: EnhanceAppContext) {

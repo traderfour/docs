@@ -1,45 +1,39 @@
 import type { DefaultTheme } from "vitepress";
-import { github, npm, version } from "../../meta";
 
 export const en: DefaultTheme.NavItem[] = [
   {
-    text: "Guide",
-    link: "/en/guide/",
-    activeMatch: "/guide/",
+    text: "Products",
+    link: "/en/products/",
+    activeMatch: "/products/",
   },
   {
-    text: "Config",
-    link: "/en/guide/",
-    activeMatch: "/guide/",
+    text: "SDKs",
+    link: "/en/sdks/",
+    activeMatch: "/sdks/",
   },
   {
-    text: "Recipes",
-    link: "/en/guide/",
-    activeMatch: "/guide/",
+    text: "APIs",
+    link: "/en/apis/",
+    activeMatch: "/en/apis/",
   },
   {
-    text: "API",
-    link: "/en/api/",
-    activeMatch: "/en/api/",
-  },
-  {
-    text: `v${version}`,
+    text: `More`,
     items: [
       {
-        text: "Changelog",
-        link: `${github}/blob/main/CHANGELOG.md`,
+        text: "Website",
+        link: `https://trader4.net`,
       },
       {
-        text: "NPM",
-        link: npm,
+        text: "Panel",
+        link: "https://app.trader4.net",
       },
       {
-        text: "Playground",
-        link: "https://github.com/Zhengqbbb/czgit-playground",
+        text: "Status",
+        link: "https://status.trader4.net",
       },
       {
         text: "FAQ",
-        link: "/en/faq/",
+        link: "https://trader4.net/faq/",
       },
     ],
   },

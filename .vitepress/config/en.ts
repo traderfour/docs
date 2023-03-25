@@ -33,9 +33,9 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     }, */
     footer: {
       message:
-        'I just try my best to make thing well, Could you give a <a c-orange-5 target="_blank" href="https://github.com/Zhengqbbb/cz-git">star ⭐</a>',
+        'Made by 💜 in <a href="https://trader4.net" target="_blank"><strong>Trader4</strong></a>, Part of <a href="https://trader4.net/open-source/" target="_blank"><strong>Trader4 Open Source</strong></a>',
       copyright:
-        'MIT Licensed | Copyright © 2022-present <a target="_blank" href="https://github.com/Zhengqbbb">Zhengqbbb</a>',
+        '© 2017-2023 <a href="https://trader4.net" target="_blank"><strong>Trader4</strong></a>, All Rights Reserved. Build 0.0.01',
     },
   },
 
