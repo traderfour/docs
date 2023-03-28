@@ -65,11 +65,6 @@ Using our broker list Method, users are now able to easily retrieve brokers list
 - `withdrawal_methods` (optional) <span>Array</span>, Filter by withdrawal_methods.
 - `money_managers` (optional) <span>Array</span>, Filter by money_managers.
 - `availability` (optional) <span>Array</span>, Filter by availability.
-- `minimum_deposit` (optional) <span>Array</span>, Filter by minimum_deposit.
-- `maximal_leverage` (optional) <span>Array</span>, Filter by maximal_leverage.
-- `minimum_lot_size` (optional) <span>Array</span>, Filter by minimum_lot_size.
-- `maximal_lot_size` (optional) <span>Array</span>, Filter by maximal_lot_size.
-- `commission` (optional) <span>Array</span>, Filter by commission.
 - `status` (optional) <span>Integer</span>, Filter by status code. Check out [Status Codes](#status-codes).
 - `spread` (optional) <span>Integer</span>, Filter by spread code. Check out [Spread Codes](#spread-codes).
 - `sort` (optional) <span>String</span>, sort brokers.
@@ -99,12 +94,6 @@ $ curl --request GET \
 - `logo` <span>String</span> logo.
 - `website` <span>String</span> website.
 - `description` <span>String</span>, description.
-- `country` <span>String</span>, countries separated by comma. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
-- `account_currencies` <span>String</span>, currencies separated by comma. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
-- `phone` <span>String</span>, phone.
-- `fax` <span>String</span>, fax.
-- `email` <span>String</span>, email.
-- `languages` <span>String</span>, languages. Check out [ISO 639-1](https://www.iso.org/iso-639-language-codes.html).
 - `is_dealing_desk` <span>Boolean</span>, is dealing desk.
 - `is_stp` <span>Boolean</span>, is stp.
 - `is_ecn` <span>Boolean</span>, is ecn.
@@ -112,86 +101,11 @@ $ curl --request GET \
 - `is_ndd` <span>Boolean</span>, is ndd.
 - `is_dma` <span>Boolean</span>, is dma.
 - `is_prime_of_prime` <span>Boolean</span>, is prime of prime.
-- `us_clients` <span>Boolean</span>, us clients.
 - `has_swap_free` <span>Boolean</span>, has swap free.
 - `has_demo_account` <span>Boolean</span>, has demo account.
-- `has_segregated_account` <span>Boolean</span>, has segregated account.
-- `interest_on_margin` <span>Boolean</span>, interest on margin.
-- `has_managed_account` <span>Boolean</span>, has managed account.
 - `has_mobile_trading` <span>Boolean</span>, has mobile trading.
 - `has_web_trading` <span>Boolean</span>, has web trading.
-- `has_api` <span>Boolean</span>, has api.
-- `has_socket` <span>Boolean</span>, has socket.
-- `has_oco_orders` <span>Boolean</span>, has oco orders.
-- `allow_hedge` <span>Boolean</span>, allow hedge.
-- `has_trailing_stops` <span>Boolean</span>, has trailing stops.
-- `has_one_click_trading` <span>Boolean</span>, has one click trading.
-- `has_bonus` <span>Boolean</span>, has bonus.
-- `has_contests` <span>Boolean</span>, has contests.
-- `has_stocks` <span>Boolean</span>, has stocks.
-- `has_options` <span>Boolean</span>, has options.
-- `has_futures` <span>Boolean</span>, has futures.
-- `has_indices` <span>Boolean</span>, has indices.
-- `has_commodities` <span>Boolean</span>, has commodities.
-- `has_energies` <span>Boolean</span>, has energies.
-- `has_shares` <span>Boolean</span>, has shares.
-- `has_spread_betting` <span>Boolean</span>, has spread betting.
-- `has_cfd` <span>Boolean</span>, has cfd.
-- `has_cryptocurrencies` <span>Boolean</span>, has cryptocurrencies.
-- `five_decimals` <span>Boolean</span>, five decimals.
-- `allow_scalping` <span>Boolean</span>, allow scalping.
-- `allow_super_scalping` <span>Boolean</span>, allow super scalping.
-- `offices` <span>Array of JSON Objects</span>, offices.
-  - `country` <span>String</span>, country of office. Check out [ISO 3166-1 Alpha-3](https://www.iso.org/iso-3166-country-codes.html).
-  - `city` <span>String</span>, city of office.
-  - `address` <span>String</span>, address of office.
-  - `phones` <span>Array of Strings</span>, phone numbers of office.
-- `regulations` <span>Array of JSON Objects</span>, regulations.
-  - `name` <span>String</span>, name of regulation. Check out [Regulations List](#regulations-list).
-  - `registered_company` <span>String</span>, name of registered company.
-  - `registered_office` <span>String</span>, address of registered office.
-  - `license` <span>String</span>, license number of company.
-  - `company_registered_number` <span>String</span>, registration number of company.
-  - `description` <span>String</span>, description.
-- `funding_methods` <span>Array of JSON Objects</span>, funding methods.
-  - `currency` <span>String</span>, currency. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
-  - `fee` <span>JSON Object</span>, funding method fee.
-    - `deposit` <span>Float</span>, deposit fee amount.
-    - `calculation_mode` <span>String</span>, unit of fee.
-  - `processing_time` <span>JSON Object</span>, funding method processing time.
-    - `deposit` <span>Integer</span>, deposit processing time.
-    - `calculation_mode` <span>String</span>, unit of processing time.
-  - `limitations` <span>JSON Object</span>, funding method limitations.
-    - `deposit` <span>JSON Object</span>, deposit limitations.
-      - `min` <span>Integer</span>, minimum deposit limitation.
-      - `max` <span>Integer</span>, maximum deposit limitation.
-      - `calculation_mode` <span>String</span>, unit of deposit limitation.
-- `withdrawal_methods` <span>Array of JSON Objects</span>, withdrawal methods.
-  - `currency` <span>String</span>, currency. Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
-  - `fee` <span>JSON Object</span>, withdrawal method fee.
-    - `withdrawal` <span>Float</span>, withdrawal fee amount.
-    - `calculation_mode` <span>String</span>, unit of fee.
-  - `processing_time` <span>JSON Object</span>, withdrawal method processing time.
-    - `withdrawal` <span>Integer</span>, withdrawal processing time.
-    - `calculation_mode` <span>String</span>, unit of processing time.
-  - `limitations` <span>JSON Object</span>, withdrawal method limitation.
-    - `withdrawal` <span>JSON Object</span>, withdrawal limitations.
-      - `min` <span>Integer</span>, minimum withdrawal limitation.
-      - `max` <span>Integer</span>, maximum withdrawal limitation.
-      - `calculation_mode` <span>String</span>, unit of withdrawal limitation.
-- `money_managers` <span>Array of JSON Objects</span>, money managers.
-  - `name` <span>String</span>, name of money manager.
-  - `description` <span>String</span>, description of money manager.
-- `availability` <span>Array of JSON Objects</span>, availability.
-  - `name` <span>String</span>, name of contact platform.
-  - `numbers` <span>Array of Strings</span>, phone numbers of contact method.
-- `minimum_deposit` <span>Array of JSON Objects</span>, minimum deposit.
-- `maximal_leverage` <span>Array of JSON Objects</span>, maximal leverage.
-- `minimum_lot_size` <span>Array of JSON Objects</span>, minimum lot size.
-- `maximal_lot_size` <span>Array of JSON Objects</span>, maximal lot size.
-- `commission` <span>Array of JSON Objects</span>, commission.
 - `status` <span>Integer</span>, status code. Check out [Status Codes](#status-codes).
-- `spread` <span>Integer</span>, spread code. Check out [Spread Codes](#spread-codes).
 
 </template>
 </Response>
@@ -311,11 +225,6 @@ $ curl --request GET \
 - `availability` <span>Array of JSON Objects</span>, availability.
   - `name` <span>String</span>, name of contact platform.
   - `numbers` <span>Array of Strings</span>, phone numbers of contact method.
-- `minimum_deposit` <span>Array of JSON Objects</span>, minimum deposit.
-- `maximal_leverage` <span>Array of JSON Objects</span>, maximal leverage.
-- `minimum_lot_size` <span>Array of JSON Objects</span>, minimum lot size.
-- `maximal_lot_size` <span>Array of JSON Objects</span>, maximal lot size.
-- `commission` <span>Array of JSON Objects</span>, commission.
 - `status` <span>Integer</span>, status code. Check out [Status Codes](#status-codes).
 - `spread` <span>Integer</span>, spread code. Check out [Spread Codes](#spread-codes).
 - `platforms` <span>Array of JSON Objects</span>, platforms of broker. Check out [Platforms List](https://next-docs.trader4.net/en/api/general/platform?lang=restful&pos=0#list).
@@ -346,6 +255,33 @@ $ curl --request GET \
 <template #result>
 
 - Platforms of broker. Check out [Platforms List](https://next-docs.trader4.net/en/api/general/platform?lang=restful&pos=0#list).
+
+</template>
+</Response>
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/{id}/instruments">
+
+# Instruments List
+
+Using our instruments list method, users are now able to easily retrieve instruments of a broker.
+
+<!--@include: /partials/authorization.md-->
+
+<template #code>
+
+```bash
+$ curl --request GET \
+  https://api.trader4.net/v1/general/brokers/{id}/instruments
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/instrument/list" >
+<template #result>
+
+- Instruments of broker. Check out [Instruments List](https://next-docs.trader4.net/en/api/general/instrument?lang=restful&pos=0#list).
 
 </template>
 </Response>
