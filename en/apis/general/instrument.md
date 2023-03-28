@@ -42,6 +42,70 @@ $ curl --request GET \
 - `logo` <span>String</span> Logo of instrument.
 - `description` <span>Text</span> Description of instrument.
 - `status` <span>Integer</span>, status code. Check out [Status Codes](#status-codes).
+- `sector` <span>Integer</span>, Sector code. Check out [Sector Codes](#sector-codes).
+- `industry` <span>Integer</span>, Industry code. Check out [Industry Codes](#industry-codes).
+- `digits` <span>Integer</span>, digits.
+- `contract_size` <span>Integer</span>, contract_size.
+- `spread` <span>Integer</span>, Spread code. Check out [Spread Codes](#spread-codes).
+- `stops_level` <span>Integer</span>, stops_level.
+- `margin_currency` <span>String</span>,margin_currency.
+- `profit_currency` <span>String</span>,profit_currency .
+- `calculation_mode` <span>Integer</span>, Calculation code. Check out [Calculation Mode Codes](#calculation-mode-codes).
+- `tick_size` <span>String</span>,tick_size.
+- `tick_value` <span>String</span>, tick_value.
+- `chart_mode` <span>Integer</span>, Chart code. Check out [Chart Mode Codes](#chart-mode-codes).
+- `margin_rate` <span>Array of JSON Objects</span>, margin_rate.
+  - `market_buy` <span>Array of JSON Objects</span>, market_buy.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `market_sell` <span>Array of JSON Objects</span>, market_sell.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `buy_limit` <span>Array of JSON Objects</span>, buy_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `sell_limit` <span>Array of JSON Objects</span>, sell_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `buy_stop` <span>Array of JSON Objects</span>, buy_stop.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `sell_stop` <span>Array of JSON Objects</span>, sell_stop.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `buy_stop_limit` <span>Array of JSON Objects</span>, buy_stop_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `sell_stop_limit` <span>Array of JSON Objects</span>, sell_stop_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `trade_mode` <span>Integer</span>, Trade code. Check out [Trade Mode Codes](#trade-mode-codes).
+  - `execution_mode` <span>Integer</span>, Execution code. Check out [Execution Mode Codes](#execution-mode-codes).
+  - `gtc_mode` <span>Integer</span>, GTC code. Check out [ GTC Mode Codes](#gtc-mode-codes).
+  - `filling_mode` <span>Integer</span>, Filling code. Check out [Filling Mode Codes](#filling-mode-codes).
+  - `expiration_mode` <span>Integer</span>, Expiration code. Check out [Expiration Mode Codes](#expiration-mode-codes).
+  - `order_mode` <span>Integer</span>, Order code. Check out [Order Mode Codes](#order-mode-codes).
+  - `swap_mode` <span>Integer</span>, Swap code. Check out [Swap Mode Codes](#swap-mode-codes).
+  - `minimal_volume` <span>Float</span>, minimal_volume.
+  - `maximal_volume` <span>Float</span>,maximal_volume.
+  - `volume_step` <span>Float</span>,volume_step.
+  - `swap_long` <span>Float</span>,swap_long.
+  - `swap_short` <span>Float</span>,swap_short.
+- `swap_rate` <span>Array of JSON Objects</span>, swap_rate.
+  - `day` <span>String</span>,day.
+  - `rate` <span>Integer</span>,rate.
+- `sessions` <span>Array of JSON Objects</span>, swap_rate.
+  - `day` <span>String</span>,day.
+  - `quote_start` <span>String</span>,quote_start.
+  - `quote_end` <span>String</span>,quote_end.
+  - `trade_start` <span>String</span>,trade_start.
+  - `trade_end` <span>String</span>,trade_end.
+- `max_leverage` <span>Integer</span> max_leverage.
+- `min_lot_size` <span>String</span> min_lot_size.
+- `max_lot_size` <span>String</span> max_lot_size.
+- `commission` <span>String</span> commission.
+- `commission_calculation_mode` <span>String</span> commission_calculation_mode.
+
 
 </template>
 </Response>
@@ -74,6 +138,69 @@ $ curl --request GET \
 - `logo` <span>String</span> Logo of instrument.
 - `description` <span>Text</span> Description of instrument.
 - `status` <span>Integer</span>, status code. Check out [Status Codes](#status-codes).
+- `sector` <span>Integer</span>, Sector code. Check out [Sector Codes](#sector-codes).
+- `industry` <span>Integer</span>, Industry code. Check out [Industry Codes](#industry-codes).
+- `digits` <span>Integer</span>, digits.
+- `contract_size` <span>Integer</span>, contract_size.
+- `spread` <span>Integer</span>, Spread code. Check out [Spread Codes](#spread-codes).
+- `stops_level` <span>Integer</span>, stops_level.
+- `margin_currency` <span>String</span>,margin_currency.
+- `profit_currency` <span>String</span>,profit_currency .
+- `calculation_mode` <span>Integer</span>, Calculation code. Check out [Calculation Mode Codes](#calculation-mode-codes).
+- `tick_size` <span>String</span>,tick_size.
+- `tick_value` <span>String</span>, tick_value.
+- `chart_mode` <span>Integer</span>, Chart code. Check out [Chart Mode Codes](#chart-mode-codes).
+- `margin_rate` <span>Array of JSON Objects</span>, margin_rate.
+  - `market_buy` <span>Array of JSON Objects</span>, market_buy.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `market_sell` <span>Array of JSON Objects</span>, market_sell.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `buy_limit` <span>Array of JSON Objects</span>, buy_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `sell_limit` <span>Array of JSON Objects</span>, sell_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `buy_stop` <span>Array of JSON Objects</span>, buy_stop.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `sell_stop` <span>Array of JSON Objects</span>, sell_stop.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `buy_stop_limit` <span>Array of JSON Objects</span>, buy_stop_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `sell_stop_limit` <span>Array of JSON Objects</span>, sell_stop_limit.
+    - `initial` <span>Integer</span>, initial.
+    - `maintenance` <span>Integer</span>, maintenance.
+  - `trade_mode` <span>Integer</span>, Trade code. Check out [Trade Mode Codes](#trade-mode-codes).
+  - `execution_mode` <span>Integer</span>, Execution code. Check out [Execution Mode Codes](#execution-mode-codes).
+  - `gtc_mode` <span>Integer</span>, GTC code. Check out [ GTC Mode Codes](#gtc-mode-codes).
+  - `filling_mode` <span>Integer</span>, Filling code. Check out [Filling Mode Codes](#filling-mode-codes).
+  - `expiration_mode` <span>Integer</span>, Expiration code. Check out [Expiration Mode Codes](#expiration-mode-codes).
+  - `order_mode` <span>Integer</span>, Order code. Check out [Order Mode Codes](#order-mode-codes).
+  - `swap_mode` <span>Integer</span>, Swap code. Check out [Swap Mode Codes](#swap-mode-codes).
+  - `minimal_volume` <span>Float</span>, minimal_volume.
+  - `maximal_volume` <span>Float</span>,maximal_volume.
+  - `volume_step` <span>Float</span>,volume_step.
+  - `swap_long` <span>Float</span>,swap_long.
+  - `swap_short` <span>Float</span>,swap_short.
+- `swap_rate` <span>Array of JSON Objects</span>, swap_rate.
+  - `day` <span>String</span>,day.
+  - `rate` <span>Integer</span>,rate.
+- `sessions` <span>Array of JSON Objects</span>, swap_rate.
+  - `day` <span>String</span>,day.
+  - `quote_start` <span>String</span>,quote_start.
+  - `quote_end` <span>String</span>,quote_end.
+  - `trade_start` <span>String</span>,trade_start.
+  - `trade_end` <span>String</span>,trade_end.
+- `max_leverage` <span>Integer</span> max_leverage.
+- `min_lot_size` <span>String</span> min_lot_size.
+- `max_lot_size` <span>String</span> max_lot_size.
+- `commission` <span>String</span> commission.
+- `commission_calculation_mode` <span>String</span> commission_calculation_mode.
 
 </template>
 </Response>
