@@ -4,7 +4,7 @@ aside: false
 
 <!--@include: /partials/libraries.md-->
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/categories">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories">
 
 # Category
 
@@ -16,7 +16,7 @@ Using this method, you can easily see the categories
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/categories
+  https://api.trader4.net/v1/marketplace/categories
 ```
 
 </template>
@@ -35,7 +35,7 @@ $ curl --request GET \
 
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/categories">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories">
 
 # Filter Category
 
@@ -56,7 +56,7 @@ Using this method, we can filter the categories.
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/account \
+  https://api.trader4.net/v1/marketplace/categories \
   -d '{
     "title": "Scalping",
     "sort[created_at]": "desc",
@@ -81,7 +81,7 @@ $ curl --request GET \
 
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/categories/{id}">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories/{id}">
 
 # Show Category
 
@@ -91,7 +91,7 @@ By using this method, you can display the desired category
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/categories/{id}
+  https://api.trader4.net/v1/marketplace/categories/{id}
 ```
 
 </template>
@@ -108,6 +108,37 @@ $ curl --request GET \
 </template>
 
 </Response>
+
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories/{id}/products">
+
+# Show product
+
+By using this method, you can show products related to the category
+
+<template #code>
+
+```bash
+$ curl --request GET \
+  https://api.trader4.net/v1/marketplace/categories/{id}/products
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="" >
+
+<template #result>
+
+- `title` <span>String</span>, The title of category.
+- `slug` <span>String</span>, The link that comes after the domain.
+- `type` <span>integer</span>, A number that specifies the type of categories .
+
+</template>
+
+</Response>
+
 
 
 ## Auto Withdraw Table

@@ -49,8 +49,8 @@ export const en: DefaultTheme.Sidebar = {
           link: "/en/products/darren",
         },
         {
-          text: "👨‍💻 Jadi <small>(License System)</small>",
-          link: "/en/products/jadi",
+          text: "👨‍💻 License System <small>(Jadi)</small>",
+          link: "/en/products/license-system",
         },
         {
           text: "👨‍🔬 Algo Dispenza",
@@ -130,6 +130,10 @@ export const en: DefaultTheme.Sidebar = {
           link: "/en/apis/category",
         },
         {
+          text: "Bridge",
+          link: "/en/apis/bridge",
+        },
+        {
           text: "Trading Account",
           link: "/en/apis/trading-account",
         },
@@ -148,6 +152,10 @@ export const en: DefaultTheme.Sidebar = {
             {
               text: "Platform",
               link: "/en/apis/general/platform"
+            },
+            {
+              text: "Instrument",
+              link: "/en/apis/general/instrument"
             },
           ]
         },

@@ -403,4 +403,86 @@ $ curl --request GET \
 ### OS Codes
 | CODE               | CONSTANT            | DESCRIPTION                                         |
 |--------------------|---------------------|-----------------------------------------------------|
-| <code>12100</code> | <pre>MICROSOFT_WINDOWS</pre>   | Microsoft Windows |
+| <code>12100</code> | <pre>AIX</pre>   | AIX.     |
+| <code>12101</code> | <pre>ANDROID</pre>   | ANDROID.     |
+| <code>12102</code> | <pre>AMIGA_OS</pre>   | AMIGA OS.     |
+| <code>12103</code> | <pre>TV_OS</pre>   | TV OS.     |
+| <code>12104</code> | <pre>ARCH_LINUX</pre>   | ARCH LINUX.     |
+| <code>12105</code> | <pre>BACK_TRACK</pre>   | BACK TRACK.     |
+| <code>12106</code> | <pre>BADA</pre>   | BADA.     |
+| <code>12107</code> | <pre>BE_OS</pre>   | BE OS.     |
+| <code>12108</code> | <pre>BLACK_BERRY_OS</pre>   | BLACK BERRY OS.     |
+| <code>12109</code> | <pre>BLACK_BERRY_TABLET_OS</pre>   | BLACK BERRY TABLET OS.     |
+| <code>12110</code> | <pre>CAIXA_MAGICA</pre>   | CAIXA MAGICA.     |
+| <code>12111</code> | <pre>CENT_OS</pre>   | CENT OS.     |
+| <code>12112</code> | <pre>CHROME_OS</pre>   | CHROME OS.     |
+| <code>12113</code> | <pre>CYANOGEN_MOD</pre>   | CYANOGEN MOD.     |
+| <code>12114</code> | <pre>DEBIAN</pre>   | DEBIAN.     |
+| <code>12115</code> | <pre>DEEPIN</pre>   | DEEPIN.     |
+| <code>12116</code> | <pre>DRAGON_FLY</pre>   | DRAGON FLY.     |
+| <code>12117</code> | <pre>FEDORA</pre>   | FEDORA.     |
+| <code>12118</code> | <pre>FIREFOX_OS</pre>   | FIREFOX OS.     |
+| <code>12119</code> | <pre>FIRE_OS</pre>   | FIRE OS.     |
+| <code>12120</code> | <pre>FREE_BSD</pre>   | FREE BSD.     |
+| <code>12121</code> | <pre>FYDE_OS</pre>   | FYDE OS.     |
+| <code>12122</code> | <pre>GENTOO</pre>   | GENTOO.     |
+| <code>12123</code> | <pre>GOOGLE_TV</pre>   | GOOGLE TV.     |
+| <code>12124</code> | <pre>HP_UX</pre>   | HP UX.     |
+| <code>12125</code> | <pre>HAIKU_OS</pre>   | HAIKU OS.     |
+| <code>12126</code> | <pre>IPAD_OS</pre>   | IPAD OS.     |
+| <code>12127</code> | <pre>HARMONY_OS</pre>   | HARMONY OS.     |
+| <code>12128</code> | <pre>KAI_OS</pre>   | KAI OS.     |
+| <code>12129</code> | <pre>KNOPPIX</pre>   | KNOPPIX.     |
+| <code>12130</code> | <pre>KUBUNTU</pre>   | KUBUNTU.     |
+| <code>12131</code> | <pre>GNU_LINUX</pre>   | GNU LINUX.     |
+| <code>12132</code> | <pre>LUBUNTU</pre>   | LUBUNTU.     |
+| <code>12133</code> | <pre>MAC</pre>   | MAC.     |
+| <code>12134</code> | <pre>MAEMO</pre>   | MAEMO.     |
+| <code>12135</code> | <pre>MAGEIA</pre>   | MAGEIA.     |
+| <code>12136</code> | <pre>MANDRIVA</pre>   | MANDRIVA.     |
+| <code>12137</code> | <pre>MEE_GO</pre>   | MEE GO.     |
+| <code>12138</code> | <pre>MINT</pre>   | MINT.     |
+| <code>12139</code> | <pre>MORPH_OS</pre>   | MORPH OS.     |
+| <code>12140</code> | <pre>NET_BSD</pre>   | NET BSD.     |
+| <code>12141</code> | <pre>NINTENDO</pre>   | NINTENDO.     |
+| <code>12142</code> | <pre>NINTENDO_MOBILE</pre>   | NINTENDO MOBILE.     |
+| <code>12143</code> | <pre>OS_2</pre>   | OS 2.     |
+| <code>12144</code> | <pre>OPEN_BSD</pre>   | OPEN BSD.     |
+| <code>12145</code> | <pre>OPEN_WRT</pre>   | OPEN WRT.     |
+| <code>12146</code> | <pre>PC_LINUX_OS</pre>   | PC LINUX OS.     |
+| <code>12147</code> | <pre>PLAY_STATION_PORTABLE</pre>   | PLAY STATION PORTABLE.     |
+| <code>12148</code> | <pre>PLAY_STATION</pre>   | PLAY STATION.     |
+| <code>12149</code> | <pre>RED_HAT</pre>   | RED HAT.     |
+| <code>12150</code> | <pre>RISC_OS</pre>   | RISC OS.     |
+| <code>12151</code> | <pre>ROKU_OS</pre>   | ROKU OS.     |
+| <code>12152</code> | <pre>ROSA</pre>   | ROSA.     |
+| <code>12153</code> | <pre>REMIX_OS</pre>   | REMIX OS.     |
+| <code>12154</code> | <pre>REX</pre>   | REX.     |
+| <code>12155</code> | <pre>SABAYON</pre>   | SABAYON.     |
+| <code>12156</code> | <pre>SUSE</pre>   | SUSE.     |
+| <code>12157</code> | <pre>SAILFISH_OS</pre>   | SAILFISH OS.     |
+| <code>12158</code> | <pre>SLACKWARE</pre>   | SLACKWARE.     |
+| <code>12159</code> | <pre>SOLARIS</pre>   | SOLARIS.     |
+| <code>12160</code> | <pre>SYLLABLE</pre>   | SYLLABLE.     |
+| <code>12161</code> | <pre>SYMBIAN</pre>   | SYMBIAN.     |
+| <code>12162</code> | <pre>SYMBIAN_OS</pre>   | SYMBIAN OS.     |
+| <code>12163</code> | <pre>SYMBIAN_OS_SERIES40</pre>   | SYMBIAN OS SERIES40.     |
+| <code>12164</code> | <pre>SYMBIAN_OS_SERIES60</pre>   | SYMBIAN OS SERIES60.     |
+| <code>12165</code> | <pre>SYMBIAN_3</pre>   | SYMBIAN 3.     |
+| <code>12166</code> | <pre>THREAD_X</pre>   | THREAD X.     |
+| <code>12167</code> | <pre>TIZEN</pre>   | TIZEN.     |
+| <code>12168</code> | <pre>UBUNTU</pre>   | UBUNTU.     |
+| <code>12169</code> | <pre>WATCH_OS</pre>   | WATCH OS.     |
+| <code>12170</code> | <pre>WHALE_OS</pre>   | WHALE OS.     |
+| <code>12171</code> | <pre>WINDOWS</pre>   | WINDOWS.     |
+| <code>12172</code> | <pre>WINDOWS_CE</pre>   | WINDOWS CE.     |
+| <code>12173</code> | <pre>WINDOWS_IOT</pre>   | WINDOWS IOT.     |
+| <code>12174</code> | <pre>WINDOWS_MOBILE</pre>   | WINDOWS MOBILE.     |
+| <code>12175</code> | <pre>WINDOWS_PHONE</pre>   | WINDOWS PHONE.     |
+| <code>12176</code> | <pre>WINDOWS_RT</pre>   | WINDOWS RT.     |
+| <code>12177</code> | <pre>XBOX</pre>   | XBOX.     |
+| <code>12178</code> | <pre>XUBUNTU</pre>   | XUBUNTU.     |
+| <code>12179</code> | <pre>YUN_OS</pre>   | YUN OS.     |
+| <code>12180</code> | <pre>IOS</pre>   | IOS.     |
+| <code>12181</code> | <pre>PALM_OS</pre>   | PALM OS.     |
+| <code>12182</code> | <pre>WEB_OS</pre>   | WEB OS.     |
