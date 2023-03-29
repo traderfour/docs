@@ -130,6 +130,10 @@ export const en: DefaultTheme.Sidebar = {
           link: "/en/apis/category",
         },
         {
+          text: "Bridge",
+          link: "/en/apis/bridge",
+        },
+        {
           text: "Trading Account",
           link: "/en/apis/trading-account",
         },
