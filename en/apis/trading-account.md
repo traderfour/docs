@@ -29,7 +29,6 @@ $ curl --request GET \
 
 - `uuid` <span>String</span>, The id of trading account.
 - `name` <span>String</span>, The name of trading account.
-- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
 - `identity` <span>String</span>, The identity of trading account.
 - `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
@@ -46,6 +45,17 @@ $ curl --request GET \
 - `market` <span>Integer</span> The market of trading account.
 - `report` <span>Integer</span> The report of trading account.
 - `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
+- `broker`<span>Array of JSON Objects</span>, broker.
+    - `name` <span>String</span> The name of broker.
+    - `logo` <span>String</span> The logo of broker.
+- `market` <span>Array of JSON Objects</span>, market.
+    - `name` <span>String</span> The name of market.
+    - `slug` <span>String</span> slug.
+    - `icon` <span>String</span> the icon of market.
+- `platform` <span>Array of JSON Objects</span>, market.
+    - `title` <span>String</span> The title of platform.
+    - `slug` <span>String</span> slug.
+    - `icon` <span>String</span> the icon of platform.
 
 </template>
 
@@ -60,12 +70,12 @@ Using our Create Method, users are now able to easily store their trading-accoun
 <template #params>
 
 - `name` <span>String</span>, The name of trading account.
-- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
+- `broker_id` <span>integer</span>, The id of broker.
+- `market_id` <span>integer</span>, The id of market.
+- `platform_id` <span>integer</span>, The id of platform.
 - `company` <span>String</span>, The name of company.
 - `identity` <span>String</span>, The identity of trading account.
 - `secret` <span>String</span>, The secret of trading account.
-- `read_only_secret` <span>String</span>, The read only secret of trading account.
-- `capital_road` <span>Boolean</span> The capital road of trading account.
 - `server` <span>String</span> The name of server.
 - `link` (optional) <span>String</span> Link of trading account.
 
@@ -77,16 +87,16 @@ Using our Create Method, users are now able to easily store their trading-accoun
 $ curl --request POST \
   https://api.trader4.net/v1/trading-accounts \
   -d '{
-    "name": "My Personal Account",
-    "broker": 15101,
-    "company": "ICMarkets",
-    "identity": "6598000312",
-    "secret": "123456",
-    "read_only_secret":"32165456",
-    "capital-road": true,
-    "server": "ICMarkets-Demo",
+    "name": "test name",
+    "broker_id": "98gdc2a2-4251-4619-9bb6-3905d22ber88",
+    "market_id": "98bdf2a1-81db-4734-af19-9f2dea855dcf",
+    "platform_id": "98c3828c-2bb8-4fe2-b280-f8a5b4b3446f",
+    "company": "test company",
+    "identity": "8946511845611",
+    "secret": "hrejrl32khihed87984rjfuhkrh4r63rhewidhyyyu3hi4ru6r34irkhb",
+    "server": "test server",
     "link": "https://www.icmarkets.com/mt4/download/icmarketsdemo.exe"
-  }'
+  }
 ```
 
 </template>
@@ -99,7 +109,6 @@ $ curl --request POST \
 
 - `uuid` <span>String</span>, The id of trading account.
 - `name` <span>String</span>, The name of trading account.
-- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
 - `identity` <span>String</span>, The identity of trading account.
 - `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
@@ -113,7 +122,6 @@ $ curl --request POST \
 - `currency` <span>String</span> Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
 - `leverage` <span>Integer</span> The leverage of trading account.
 - `stopout_level` <span>Integer</span> The stopout level of trading account.
-- `market` <span>Integer</span> The market of trading account.
 - `report` <span>Integer</span> The report of trading account.
 - `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
 - `balance` <span>Integer</span> Balance of trading account.
@@ -144,13 +152,13 @@ $ curl --request GET \
 
 </CodeBox>
 
-<Response jfile="v1/tradingAccount/trading-account/single" >
+<Response jfile="v1/trading-account/single" >
 
 <template #result>
 
+
 - `uuid` <span>String</span>, The id of trading account.
 - `name` <span>String</span>, The name of trading account.
-- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
 - `company` <span>String</span>, The name of company.
 - `identity` <span>String</span>, The identity of trading account.
 - `trade_mode` <span>integer</span> Check out [Trade Mode Table](#trade-mode-table).
@@ -167,12 +175,17 @@ $ curl --request GET \
 - `market` <span>Integer</span> The market of trading account.
 - `report` <span>Integer</span> The report of trading account.
 - `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
-- `balance` <span>Integer</span> Balance of trading account.
-- `credit` <span>Integer</span> Credit of trading account.
-- `equity` <span>String</span> Equity of trading account.
-- `margin` <span>String</span> Margin of trading account.
-- `free_margin` <span>String</span> Free margin of trading account.
-- `margin_level` <span>String</span> Margin level of trading account.
+- `broker`<span>Array of JSON Objects</span>, broker.
+    - `name` <span>String</span> The name of broker.
+    - `logo` <span>String</span> The logo of broker.
+- `market` <span>Array of JSON Objects</span>, market.
+    - `name` <span>String</span> The name of market.
+    - `slug` <span>String</span> slug.
+    - `icon` <span>String</span> the icon of market.
+- `platform` <span>Array of JSON Objects</span>, market.
+    - `title` <span>String</span> The title of platform.
+    - `slug` <span>String</span> slug.
+    - `icon` <span>String</span> the icon of platform.
 
 </template>
 
@@ -188,11 +201,12 @@ Using our Update Method, users are now able to easily update their trading accou
 <template #params>
 
 - `name` <span>String</span>, The name of trading account.
-- `broker` <span>integer</span>, The type of broker. Check out [Brokers Table](#brokers-table).
+- `broker_id` <span>integer</span>, The id of broker.
+- `market_id` <span>integer</span>, The id of market.
+- `platform_id` <span>integer</span>, The id of platform.
 - `company` <span>String</span>, The name of company.
 - `identity` <span>String</span>, The identity of trading account.
 - `secret` <span>String</span>, The secret of trading account.
-- `capital_road` <span>Boolean</span> The capital road of trading account.
 - `server` <span>String</span> The name of server.
 - `link` (optional) <span>String</span> Link of trading account.
 
@@ -204,16 +218,16 @@ Using our Update Method, users are now able to easily update their trading accou
 $ curl --request PUT \
   https://api.trader4.net/v1/trading-accounts \
     -d '{
-    "name": "My Personal Account",
-    "broker": 15101,
-    "company": "ICMarkets",
-    "identity": "6598000312",
-    "secret": "123456",
-    "capital-road": true,
-    "server": "ICMarkets-Demo",
+    "name": "test name 2",
+    "broker_id": "98gdc2a2-4251-4619-9bb6-3905d22ber39",
+    "market_id": "98bdf2a1-80e9-451b-bad4-60d2eb628cfe",
+    "platform_id": "98c3828c-2bb8-4fe2-b280-f8a5b4b3446f",
+    "company": "test company 2",
+    "identity": "8946511845611",
+    "secret": "hrejrl32khihed87984rjfuhkrh4r63rhewidhyyyu3hi4ru6r34irkhb",
+    "server": "test server 2",
     "link": "https://www.icmarkets.com/mt4/download/icmarketsdemo.exe"
-    
-    }'
+   }
 ```
 
 </template>
@@ -240,7 +254,6 @@ $ curl --request PUT \
 - `currency` <span>String</span> Check out [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
 - `leverage` <span>Integer</span> The leverage of trading account.
 - `stopout_level` <span>Integer</span> The stopout level of trading account.
-- `market` <span>Integer</span> The market of trading account.
 - `report` <span>Integer</span> The report of trading account.
 - `status` <span>Integer</span>  Check out [Trading Account Status Table](#trading-account-status-table).
 - `balance` <span>Integer</span> Balance of trading account.

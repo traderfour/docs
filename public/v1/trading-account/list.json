@@ -3,9 +3,8 @@
   "message": "Response successfully returned",
   "results": [
     {
-      "uuid": "98ac3c6c-6773-41d2-8d23-c48eda98b5e1",
+      "uuid": "98cd5113-937f-48f0-91c5-db01ea8fa5f2",
       "name": "test name",
-      "broker": 15101,
       "company": "test company",
       "identity": "8946511845611",
       "trade_mode": 15201,
@@ -15,13 +14,31 @@
       "hedge": true,
       "capital_road": false,
       "server": "test server",
-      "link": "https://www.icmarkets.com/mt4/download/icmarketsdemo.exe",
+      "link": null,
       "currency": null,
       "leverage": null,
       "stopout_level": null,
-      "market": null,
       "report": 0,
-      "status": 15001
+      "status": 15001,
+      "broker": {
+        "id": "98gdc2a2-4251-4619-9bb6-3905d22ber88",
+        "name": "",
+        "logo": null
+      },
+      "market": {
+        "id": "98bdf2a1-81db-4734-af19-9f2dea855dcf",
+        "name": "Bond Market",
+        "slug": "bond-market",
+        "icon": null
+      },
+      "platforms": [
+        {
+          "id": "98c3828c-2bb8-4fe2-b280-f8a5b4b3446f",
+          "title": "",
+          "slug": null,
+          "icon": null
+        }
+      ]
     }
   ],
   "metas": []
