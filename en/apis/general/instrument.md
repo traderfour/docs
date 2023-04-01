@@ -110,7 +110,7 @@ $ curl --request GET \
 </template>
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/instruments/{id}">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/instruments/:id">
 
 # Details
 
@@ -122,7 +122,7 @@ Using our instrument details method, users are now able to easily retrieve infor
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/instruments/{id}
+  https://api.trader4.net/v1/general/instruments/:id
 ```
 
 </template>

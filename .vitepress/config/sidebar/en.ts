@@ -125,10 +125,7 @@ export const en: DefaultTheme.Sidebar = {
           text: "Account",
           link: "/en/apis/account",
         },
-        {
-          text: "Category",
-          link: "/en/apis/category",
-        },
+
         {
           text: "Bridge",
           link: "/en/apis/bridge",
@@ -166,6 +163,13 @@ export const en: DefaultTheme.Sidebar = {
         {
           text: "Marketplace",
           link: "/en/apis/marketplace",
+          items:[
+            {
+              text: "Category",
+              link: "/en/apis/category",
+
+            },
+          ]
         },
         {
           text: "Cloud",

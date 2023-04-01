@@ -165,7 +165,7 @@ Using our delete Method, users are now able to easily delete their product infor
 
 ```bash
 $ curl --request PUT \
-  https://api.trader4.net/v1/products/{id} \
+  https://api.trader4.net/v1/products/:id \
 
 ```
 

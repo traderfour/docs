@@ -49,7 +49,7 @@ $ curl --request GET \
 </Response>
 
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/markets/{id}">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/markets/:id">
 
 # Details
 
@@ -61,7 +61,7 @@ Using our market details method, users are now able to easily retrieve informati
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/markets/{id}
+  https://api.trader4.net/v1/general/markets/:id
 ```
 
 </template>
@@ -85,7 +85,7 @@ $ curl --request GET \
 </template>
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/markets/{id}/platforms">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/markets/:id/platforms">
 
 # Platforms List
 
@@ -97,7 +97,7 @@ Using our platforms list method, users are now able to easily retrieve platforms
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/markets/{id}/platforms
+  https://api.trader4.net/v1/general/markets/:id/platforms
 ```
 
 </template>
