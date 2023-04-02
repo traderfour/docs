@@ -81,36 +81,7 @@ $ curl --request GET \
 
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories/{id}">
-
-# Show Category
-
-By using this method, you can display the desired category
-
-<template #code>
-
-```bash
-$ curl --request GET \
-  https://api.trader4.net/v1/marketplace/categories/{id}
-```
-
-</template>
-
-</CodeBox>
-
-<Response jfile="v1/category/show" >
-
-<template #result>
-
-- `title` <span>String</span>, The title of category.
-- `slug` <span>String</span>, The link that comes after the domain.
-- `type` <span>integer</span>, A number that specifies the type of categories .
-</template>
-
-</Response>
-
-
-<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories/{id}/products">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/marketplace/categories/:id/products">
 
 # Show product
 
@@ -120,20 +91,33 @@ By using this method, you can show products related to the category
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/marketplace/categories/{id}/products
+  https://api.trader4.net/v1/marketplace/categories/:id/products
 ```
 
 </template>
 
 </CodeBox>
 
-<Response jfile="" >
+<Response jfile="v1/category/product" >
 
 <template #result>
 
-- `title` <span>String</span>, The title of category.
-- `slug` <span>String</span>, The link that comes after the domain.
-- `type` <span>integer</span>, A number that specifies the type of categories .
+- `id` <span>Integer</span>, The id of product.
+- `title` <span>String</span>, The title of product.
+- `slogan` <span>String</span>, The link that comes after the domain.
+- `introduction` <span>String</span>, The introduction of product.
+- `description` <span>String</span>, The description of product.
+- `logo` <span>String</span>, The logo of product.
+- `cover` <span>String</span>, The cover of product.
+- `downloads` <span>Integer</span>, downloads.
+- `views` <span>Integer</span>, views.
+- `purchases` <span>Integer</span>, purchases.
+- `likes` <span>Integer</span>, likes.
+- `type` <span>String</span>, type.
+- `status` <span>Integer</span>, status.
+
+
+
 
 </template>
 

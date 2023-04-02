@@ -10,7 +10,7 @@ declare global {
 
 const baiduAnalytics = (id: string) => {
   const btagScript = document.createElement('script')
-  btagScript.src = `https://hm.baidu.com/hm.js?${id}`
+  btagScript.src = `https://hm.baidu.com/hm.js?$:id`
   btagScript.async = true
   if (!document.head.contains(btagScript))
     document.head.appendChild(btagScript)
@@ -25,7 +25,7 @@ const googleAnalytics = (id: string) => {
 
   // insert gtag `<script>` tag
   const gtagScript = document.createElement('script')
-  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
+  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=$:id`
   gtagScript.async = true
   document.head.appendChild(gtagScript)
 

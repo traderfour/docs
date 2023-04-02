@@ -111,7 +111,7 @@ $ curl --request GET \
 </Response>
 
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/{id}">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/:id">
 
 # Details
 
@@ -123,7 +123,7 @@ Using our broker details method, users are now able to easily retrieve informati
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/brokers/{id}
+  https://api.trader4.net/v1/general/brokers/:id
 ```
 
 </template>
@@ -232,7 +232,7 @@ $ curl --request GET \
 </template>
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/{id}/platforms">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/:id/platforms">
 
 # Platforms List
 
@@ -244,7 +244,7 @@ Using our platforms list method, users are now able to easily retrieve platforms
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/brokers/{id}/platforms
+  https://api.trader4.net/v1/general/brokers/:id/platforms
 ```
 
 </template>
@@ -259,7 +259,7 @@ $ curl --request GET \
 </template>
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/{id}/instruments">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/:id/instruments">
 
 # Instruments List
 
@@ -271,7 +271,7 @@ Using our instruments list method, users are now able to easily retrieve instrum
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/brokers/{id}/instruments
+  https://api.trader4.net/v1/general/brokers/:id/instruments
 ```
 
 </template>
