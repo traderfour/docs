@@ -52,7 +52,7 @@ $ curl --request GET \
     - `name` <span>String</span> The name of market.
     - `slug` <span>String</span> slug.
     - `icon` <span>String</span> the icon of market.
-- `platform` <span>Array of JSON Objects</span>, market.
+- `platforms` <span>Array of JSON Objects</span>, market.
     - `title` <span>String</span> The title of platform.
     - `slug` <span>String</span> slug.
     - `icon` <span>String</span> the icon of platform.
@@ -71,9 +71,7 @@ Using our Create Method, users are now able to easily store their trading-accoun
 
 - `name` <span>String</span>, The name of trading account.
 - `broker_id` <span>integer</span>, The id of broker.
-- `market_id` <span>integer</span>, The id of market.
 - `platform_id` <span>integer</span>, The id of platform.
-- `company` <span>String</span>, The name of company.
 - `identity` <span>String</span>, The identity of trading account.
 - `secret` <span>String</span>, The secret of trading account.
 - `server` <span>String</span> The name of server.
@@ -89,9 +87,7 @@ $ curl --request POST \
   -d '{
     "name": "test name",
     "broker_id": "98gdc2a2-4251-4619-9bb6-3905d22ber88",
-    "market_id": "98bdf2a1-81db-4734-af19-9f2dea855dcf",
     "platform_id": "98c3828c-2bb8-4fe2-b280-f8a5b4b3446f",
-    "company": "test company",
     "identity": "8946511845611",
     "secret": "hrejrl32khihed87984rjfuhkrh4r63rhewidhyyyu3hi4ru6r34irkhb",
     "server": "test server",
@@ -130,7 +126,17 @@ $ curl --request POST \
 - `margin` <span>String</span> Margin of trading account.
 - `free_margin` <span>String</span> Free margin of trading account.
 - `margin_level` <span>String</span> Margin level of trading account.
-
+- `broker`<span>Array of JSON Objects</span>, broker.
+  - `name` <span>String</span> The name of broker.
+  - `logo` <span>String</span> The logo of broker.
+- `market` <span>Array of JSON Objects</span>, market.
+  - `name` <span>String</span> The name of market.
+  - `slug` <span>String</span> slug.
+  - `icon` <span>String</span> the icon of market.
+- `platforms` <span>Array of JSON Objects</span>, market.
+  - `title` <span>String</span> The title of platform.
+  - `slug` <span>String</span> slug.
+  - `icon` <span>String</span> the icon of platform.
 </template>
 
 </Response>
@@ -182,7 +188,7 @@ $ curl --request GET \
     - `name` <span>String</span> The name of market.
     - `slug` <span>String</span> slug.
     - `icon` <span>String</span> the icon of market.
-- `platform` <span>Array of JSON Objects</span>, market.
+- `platforms` <span>Array of JSON Objects</span>, market.
     - `title` <span>String</span> The title of platform.
     - `slug` <span>String</span> slug.
     - `icon` <span>String</span> the icon of platform.
@@ -262,7 +268,17 @@ $ curl --request PUT \
 - `margin` <span>String</span> Margin of trading account.
 - `free_margin` <span>String</span> Free margin of trading account.
 - `margin_level` <span>String</span> Margin level of trading account.
-
+- `broker`<span>Array of JSON Objects</span>, broker.
+  - `name` <span>String</span> The name of broker.
+  - `logo` <span>String</span> The logo of broker.
+- `market` <span>Array of JSON Objects</span>, market.
+  - `name` <span>String</span> The name of market.
+  - `slug` <span>String</span> slug.
+  - `icon` <span>String</span> the icon of market.
+- `platform` <span>Array of JSON Objects</span>, market.
+  - `title` <span>String</span> The title of platform.
+  - `slug` <span>String</span> slug.
+  - `icon` <span>String</span> the icon of platform.
 </template>
 
 </Response>
@@ -314,22 +330,20 @@ $ curl --request DELETE \
 | <code>15012</code>      | <pre>pending_activation</pre>   | Pending Activation Trading Account.                |
 
 
-## Brokers Table
-
-| CODE                    | CONSTANT                | DESCRIPTION                                       |
-|-------------------------|-------------------------|---------------------------------------------------|
-| <code>15101</code>      | <pre>forex</pre>        | Forex Broker.                                     |
-
-
 ## Trade Mode Table
 
-| CODE                    | CONSTANT                | DESCRIPTION                                       |
-|-------------------------|-------------------------|---------------------------------------------------|
-| <code>15201</code>      | <pre>default</pre>      | Default trading mode.                             |
+| CODE               | CONSTANT                | DESCRIPTION |
+|--------------------|-------------------------|-------------|
+| <code>15200</code> | <pre>DEMO</pre>      | DEMO.       |
+| <code>15201</code> | <pre>CONTEST</pre>      | .       |
+| <code>15202</code> | <pre>REAL</pre>      | REAL.       |
 
 
 ## Margin Type Table
 
-| CODE                    | CONSTANT                | DESCRIPTION                                      |
-|-------------------------|-------------------------|--------------------------------------------------|
-| <code>15301</code>      | <pre>default</pre>      | Default margin type.                             |
+| CODE               | CONSTANT                | DESCRIPTION                                     |
+|--------------------|-------------------------|-------------------------------------------------|
+| <code>15300</code> | <pre>RETAIL_NETTING</pre>      |                             |      
+| <code>15301</code> | <pre>EXCHANGE</pre>      |                             |      
+| <code>15302</code> | <pre>RETAIL_HEDGING</pre>      |                             |      
+
