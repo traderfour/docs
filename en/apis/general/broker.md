@@ -259,7 +259,8 @@ $ curl --request GET \
 </template>
 </Response>
 
-<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/:id/instruments">
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/brokers/:broker_id/platforms/
+:platfrom_id/instruments">
 
 # Instruments List
 
@@ -271,7 +272,7 @@ Using our instruments list method, users are now able to easily retrieve instrum
 
 ```bash
 $ curl --request GET \
-  https://api.trader4.net/v1/general/brokers/:id/instruments
+  https://api.trader4.net/v1/general/brokers/:broker_id/platforms/:platfrom_id/instruments
 ```
 
 </template>
