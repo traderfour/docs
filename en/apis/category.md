@@ -102,7 +102,7 @@ $ curl --request GET \
 
 <template #result>
 
-- `id` <span>Integer</span>, The id of product.
+- `id` <span>String</span>, The id of product.
 - `title` <span>String</span>, The title of product.
 - `slogan` <span>String</span>, The link that comes after the domain.
 - `introduction` <span>String</span>, The introduction of product.
