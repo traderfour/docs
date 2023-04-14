@@ -49,28 +49,56 @@ $ curl --request GET \
 - `terms_of_use` <span>Text</span> terms of use.
 - `api_documentation` <span>Text</span> api documentation.
 - `address` <span>Text</span> address.
-- `permissions` <span>Array of JSON Objects</span> platform permissions.
-  - `title` <span>String</span> permission title.
-  - `code` <span>Integer</span> permission code. Check out [Permission Codes](#permission-codes).
-  - `description` <span>String</span> Description of permission.
-- `oss` <span>Array of JSON Objects</span> platform Operating Systems.
-  - `title` <span>String</span> OS title.
-  - `code` <span>Integer</span> OS code. Check out [OS Codes](#os-codes).
-  - `file` <span>String</span> OS file URL.
-  - `compatibility` <span>String</span> OS compatibility.
-  - `license` <span>String</span> OS license type.
-  - `website` <span>String</span> OS website URL.
-  - `change_log` <span>String</span> OS change log URL.
+- `permissions` <span>String</span> platform permissions.
+- `oss` <span>String</span> platform Operating Systems.
 - `status` <span>Integer</span> The status of platform. Check out [Status Codes](#status-codes).
 
 </template>
 </Response>
+
+<CodeBox lang="Restful" method="GET" endpoint="/v1/general/platforms/:id/server">
+
+# sever
+
+Using our platform list Method, users are now able to easily retrieve platforms list.
+
+<!--@include: /partials/authorization.md-->
+
+<template #params>
+
+- `id`  <span>Integer</span>, id of platform.
+
+
+</template>
+
+<template #code>
+
+```bash
+$ curl --request GET \
+  https://api.trader4.net/v1/general/platforms/:id/server
+```
+
+</template>
+
+</CodeBox>
+
+<Response jfile="v1/platform/server" >
+<template #result>
+
+- `id` <span>String</span> ID of server.
+- `title` <span>String</span> Title of server.
+
+</template>
+</Response>
+
 
 ### Status Codes
 | CODE               | CONSTANT            | DESCRIPTION                                         |
 |--------------------|---------------------|-----------------------------------------------------|
 | <code>11600</code> | <pre>ACTIVE</pre>   | The platform is active and have full functionality. |
 | <code>11601</code> | <pre>INACTIVE</pre> | The platform is inactive and just can read data.    |
+
+
 
 ### Permission Codes
 | CODE               | CONSTANT            | DESCRIPTION                                         |

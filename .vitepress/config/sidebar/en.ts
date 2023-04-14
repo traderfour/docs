@@ -33,65 +33,73 @@ export const en: DefaultTheme.Sidebar = {
           link: "/en/products/algo-portfolio",
         },
         {
-          text: "👧 Algo Mirzakhani",
-          link: "/en/products/mirzakhani",
+          text: "🖥️ Dashboard X",
+          link: "/en/products/dashboard-x",
         },
         {
-          text: "👨‍🎨 Algo Pishro",
-          link: "/en/products/pishro",
+          text: "🔗 Bridge",
+          link: "/en/products/bridge",
         },
+        // {
+        //   text: "👧 Algo Mirzakhani",
+        //   link: "/en/products/mirzakhani",
+        // },
+        // {
+        //   text: "👨‍🎨 Algo Pishro",
+        //   link: "/en/products/pishro",
+        // },
+        // {
+        //   text: "👴 Algo Bob",
+        //   link: "/en/products/bob",
+        // },
+        // {
+        //   text: "🤵 Algo Darren",
+        //   link: "/en/products/darren",
+        // },
         {
-          text: "👴 Algo Bob",
-          link: "/en/products/bob",
-        },
-        {
-          text: "🤵 Algo Darren",
-          link: "/en/products/darren",
-        },
-        {
-          text: "👨‍💻 License System <small>(Jadi)</small>",
+          text: "👨‍💻 License System",
           link: "/en/products/license-system",
         },
+        // {
+        //   text: "👨‍🔬 Algo Dispenza",
+        //   link: "/en/products/dispenza",
+        // },
         {
-          text: "👨‍🔬 Algo Dispenza",
-          link: "/en/products/dispenza",
+          text: "🔳 Trading Framework",
+          link: "/en/products/trading-framework",
         },
-        {
-          text: "👨‍🔬 Samii <small>(Trading Framework)</small>",
-          link: "/en/products/samii",
-        },
-        {
-          text: "🎮 Algo MiaLand",
-          link: "/en/products/mialand",
-        },
-        {
-          text: "🏝️ KuroshTopia <small>(TradeHub)</small>",
-          link: "/en/products/jadi",
-        },
-        {
-          text: "Bazaar",
-          link: "/en/products/bazaar",
-        },
-        {
-          text: "Pythia",
-          link: "/en/products/pythia",
-        },
-        {
-          text: "💚 Yaseen",
-          link: "/en/products/yaseen",
-        },
-        {
-          text: "💀 Azrael",
-          link: "/en/products/azrael",
-        },
-        {
-          text: "Siddhartha",
-          link: "/en/products/siddhartha",
-        },
-        {
-          text: "🕉️ Shiva",
-          link: "/en/products/shiva",
-        },
+        // {
+        //   text: "🎮 Algo MiaLand",
+        //   link: "/en/products/mialand",
+        // },
+        // {
+        //   text: "🏝️ KuroshTopia <small>(TradeHub)</small>",
+        //   link: "/en/products/jadi",
+        // },
+        // {
+        //   text: "Bazaar",
+        //   link: "/en/products/bazaar",
+        // },
+        // {
+        //   text: "Pythia",
+        //   link: "/en/products/pythia",
+        // },
+        // {
+        //   text: "💚 Yaseen",
+        //   link: "/en/products/yaseen",
+        // },
+        // {
+        //   text: "💀 Azrael",
+        //   link: "/en/products/azrael",
+        // },
+        // {
+        //   text: "Siddhartha",
+        //   link: "/en/products/siddhartha",
+        // },
+        // {
+        //   text: "🕉️ Shiva",
+        //   link: "/en/products/shiva",
+        // },
 
       ],
     },
@@ -101,14 +109,14 @@ export const en: DefaultTheme.Sidebar = {
       collapsed: true,
       link: "/en/sdks/",
       items: [
-        { text: "Samii (Trading Framework)", link: "/en/skds/samii/intro" },
-        { text: "Trading Bot", link: "/en/skds/trading-bot/intro" },
-        { text: "Trading Terminal", link: "/en/skds/trading-terminal/intro" },
-        { text: "Trading API", link: "/en/skds/trading-api/intro" },
-        { text: "Trading SDK", link: "/en/skds/trading-sdk/intro" },
-        { text: "Trading Library", link: "/en/skds/trading-library/intro" },
-        { text: "Trading Platform", link: "/en/skds/trading-platform/intro" },
-        { text: "Trading Tools", link: "/en/skds/trading-tools/intro" },
+        { text: "Trading Framework", link: "/en/skds/trading-framework" },
+        // { text: "Trading Bot", link: "/en/skds/trading-bot/intro" },
+        // { text: "Trading Terminal", link: "/en/skds/trading-terminal/intro" },
+        // { text: "Trading API", link: "/en/skds/trading-api/intro" },
+        // { text: "Trading SDK", link: "/en/skds/trading-sdk/intro" },
+        // { text: "Trading Library", link: "/en/skds/trading-library/intro" },
+        // { text: "Trading Platform", link: "/en/skds/trading-platform/intro" },
+        // { text: "Trading Tools", link: "/en/skds/trading-tools/intro" },
       ]
     },
     {
@@ -119,73 +127,107 @@ export const en: DefaultTheme.Sidebar = {
       items: [
         {
           text: "oAuth",
-          link: "/en/apis/oauth",
+          link: "/en/apis/oauth/",
         },
         {
           text: "Account",
-          link: "/en/apis/account",
+          link: "/en/apis/account/",
         },
 
         {
           text: "Bridge",
-          link: "/en/apis/bridge",
+          link: "/en/apis/bridge/",
+          items:[
+            {
+              text: "Functions",
+              link: "/en/apis/bridge/functions/",
+              items:[
+                {
+                  text: "MQL5",
+                  link: "/en/apis/bridge/functions/mql5"
+                },
+                {
+                    text: "MQL4",
+                    link: "/en/apis/bridge/functions/mql4"
+                },
+              ]
+            }
+          ],
         },
         {
           text: "Trading Account",
-          link: "/en/apis/trading-account",
+          link: "/en/apis/trading-account/",
         },
         {
           text: "General",
-          link: "/en/apis/general",
+          link: "/en/apis/general/",
           items: [
             {
               text: "Market",
-              link: "/en/apis/general/market"
+              link: "/en/apis/general/market/"
             },
             {
               text: "Broker",
-              link: "/en/apis/general/broker"
+              link: "/en/apis/general/broker/"
             },
             {
               text: "Platform",
-              link: "/en/apis/general/platform"
+              link: "/en/apis/general/platform/"
             },
             {
               text: "Instrument",
-              link: "/en/apis/general/instrument"
+              link: "/en/apis/general/instrument/"
             },
           ]
         },
         {
           text: "Finance",
-          link: "/en/apis/trader4/finance",
+          link: "/en/apis/trader4/finance/",
         },
         {
           text: "Marketplace",
-          link: "/en/apis/marketplace",
+          link: "/en/apis/marketplace/",
           items:[
             {
               text: "Category",
-              link: "/en/apis/category",
+              link: "/en/apis/marketplace/category/",
 
             },
+            {
+              text: "Funded Account",
+              link: "/en/apis/marketplace/funded-account/",
+            }
           ]
         },
         {
           text: "Cloud",
-          link: "/en/apis/trader4/cloud",
+          link: "/en/apis/trader4/cloud/",
         },
         {
           text: "Bazaar (Social Trading)",
-          link: "/en/apis/trader4/bazaar",
+          link: "/en/apis/trader4/bazaar/",
         },
         {
           text: "Financial Engineering",
-          link: "/en/apis/trader4/financial-engineering",
-        },
-        {
-          text: "Capital Road (Funded)",
-          link: "/en/apis/trader4/capital-road",
+          link: "/en/apis/trader4/financial-engineering/",
+          items: [
+            {
+                text: "Cash Flow",
+                link: "/en/apis/financial-engineering/cash-flow/",
+            },
+            {
+                text: "Risk Management",
+                link: "/en/apis/financial-engineering/risk-management/",
+            },
+            {
+                text: "Money Management",
+                link: "/en/apis/financial-engineering/money-management/",
+            },
+            {
+                text: "Trading Plan",
+                link: "/en/apis/financial-engineering/trading-plan/",
+            },
+          ],
         }
       ],
     },
