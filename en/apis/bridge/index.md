@@ -2,7 +2,7 @@
 aside: false
 ---
 
-<!--@include: /partials/libraries.md-->
+<!--@include: ../partials/libraries.md-->
 
 <CodeBox lang="Restful" method="webSocket" endpoint="/bridge-client">
 
