@@ -127,11 +127,12 @@ export const en: DefaultTheme.Sidebar = {
       items: [
         {
           text: "oAuth",
-          link: "/en/apis/oauth/",
+          link: "/en/apis/oauth",
         },
+        
         {
           text: "Account",
-          link: "/en/apis/account/",
+          link: "/en/apis/account",
         },
 
         {
@@ -154,29 +155,26 @@ export const en: DefaultTheme.Sidebar = {
             }
           ],
         },
-        {
-          text: "Trading Account",
-          link: "/en/apis/trading-account/",
-        },
+
         {
           text: "General",
-          link: "/en/apis/general/",
+          link: "/en/apis/general/market",
           items: [
             {
               text: "Market",
-              link: "/en/apis/general/market/"
+              link: "/en/apis/general/market"
             },
             {
               text: "Broker",
-              link: "/en/apis/general/broker/"
+              link: "/en/apis/general/broker"
             },
             {
               text: "Platform",
-              link: "/en/apis/general/platform/"
+              link: "/en/apis/general/platform"
             },
             {
               text: "Instrument",
-              link: "/en/apis/general/instrument/"
+              link: "/en/apis/general/instrument"
             },
           ]
         },
