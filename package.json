@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "1.0.0-alpha.10",
+  "version": "1.0.0-alpha.11",
   "private": true,
   "scripts": {
     "build": "vitepress build",
@@ -30,6 +30,6 @@
     "vite": "^4.0.4",
     "vite-plugin-pwa": "^0.14.1",
     "vite-plugin-radar": "^0.7.0",
-    "vitepress": "^1.0.0-alpha.43"
+    "vitepress": "^1.0.0-alpha.69"
   }
 }
