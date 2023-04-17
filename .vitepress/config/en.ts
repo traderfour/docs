@@ -2,6 +2,7 @@ import type { DefaultTheme, LocaleSpecificConfig } from "vitepress";
 import { descriptionEN, github, ogImg, site } from "../meta";
 import { en as nav } from "./navbar";
 import { en as sidebar } from "./sidebar";
+import { version } from "../../package.json";
 
 export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
   description: descriptionEN,
@@ -35,7 +36,7 @@ export const enConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
       message:
         'Made by 💜 in <a href="https://trader4.net" target="_blank"><strong>Trader4</strong></a>, Part of <a href="https://trader4.net/open-source/" target="_blank"><strong>Trader4 Open Source</strong></a>',
       copyright:
-        '© 2017-2023 <a href="https://trader4.net" target="_blank"><strong>Trader4</strong></a>, All Rights Reserved. Build 0.0.01',
+        `© 2017-2023 <a href="https://trader4.net" target="_blank"><strong>Trader4</strong></a>, All Rights Reserved. Build ${version}`,
     },
   },
 

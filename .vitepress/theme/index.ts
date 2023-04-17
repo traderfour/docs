@@ -22,35 +22,34 @@ if (inBrowser) {
 export default {
   ...Theme,
   Layout() {
-    return h(
-      Theme.Layout,
-      {
-        class: useData().dir.value === "rtl" ? "rtl" : "",
-      },
-    );
-  },
-  enhanceApp({ app, router }: EnhanceAppContext) {
-    app.component("CodeGroup", CodeGroup);
-    app.component("CodeGroupItem", CodeGroupItem);
-    createMediumZoomProvider(app, router);
-
-    // TODO: add google analytics later
-    /*  usePageAnalytics("", ""); */
-
-    //Custom Components By Trader4 Team ;)
-    app.component("Response", Response);
-    app.component("SelectLibraries", SelectLibraries);
-    app.component("CodeBox", CodeBox);
-
-    //Directive for tooltop package
-    app.directive("tooltip", {
-      mounted(el, binding) {
-        init(el, binding);
-      },
-      updated(el, binding) {
-        init(el, binding);
-      },
+    return h(Theme.Layout, {
+      class: useData().dir.value === "rtl" ? "rtl" : "",
     });
+  },
+  async enhanceApp({ app, router }: EnhanceAppContext) {
+    if (!import.meta.env.SSR) {
+      app.component("CodeGroup", CodeGroup);
+      app.component("CodeGroupItem", CodeGroupItem);
+      createMediumZoomProvider(app, router);
+
+      // TODO: add google analytics later
+      /*  usePageAnalytics("", ""); */
+
+      //Custom Components By Trader4 Team ;)
+      app.component("Response", Response);
+      app.component("SelectLibraries", SelectLibraries);
+      app.component("CodeBox", CodeBox);
+
+      //Directive for tooltop package
+      app.directive("tooltip", {
+        mounted(el, binding) {
+          init(el, binding);
+        },
+        updated(el, binding) {
+          init(el, binding);
+        },
+      });
+    }
   },
   setup() {
     const router = useRouter();
