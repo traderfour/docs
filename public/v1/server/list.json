@@ -1,0 +1,35 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": {
+    "id": "98f3a6dc-9dac-42d6-ab7e-be5a18157d89",
+    "title": "",
+    "ip": "",
+    "ip_type": 12970,
+    "port": 0,
+    "proxy_ip": null,
+    "proxy_port": null,
+    "proxy_type": null,
+    "proxy_username": null,
+    "proxy_password": null,
+    "market": {
+      "id": "98f3a6dc-575b-4034-9cf3-7ab71c5e28d8",
+      "name": "Bond Market",
+      "slug": "bond-market",
+      "icon": null
+    },
+    "broker": {
+      "id": "98f3a6dc-a37c-4867-ac39-6d7dfdf6ec54",
+      "name": "IG",
+      "slug": null,
+      "icon": null
+    },
+    "platform": {
+      "id": "98f3a6dc-6cec-4356-8223-9ae6e38052eb",
+      "name": null,
+      "slug": null,
+      "icon": null
+    }
+  },
+  "metas": []
+}

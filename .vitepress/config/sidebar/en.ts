@@ -176,6 +176,10 @@ export const en: DefaultTheme.Sidebar = {
               text: "Instrument",
               link: "/en/apis/general/instrument"
             },
+            {
+              text: "Server",
+              link: "/en/apis/general/server"
+            },
           ]
         },
         {

@@ -1,0 +1,35 @@
+{
+  "succeed": true,
+  "message": "Response successfully returned",
+  "results": [
+    {
+      "id": "98f3a6dc-9dac-42d6-ab7e-be5a18157d22",
+      "name": "test",
+      "slug": null,
+      "logo": null,
+      "description": null,
+      "sector": 12200,
+      "industry": 12300,
+      "digits": 2,
+      "contract_size": 0,
+      "spread": 0,
+      "stops_level": 0,
+      "margin_currency": "USD",
+      "profit_currency": "USD",
+      "calculation_mode": 12500,
+      "tick_size": "0.00",
+      "tick_value": 0,
+      "chart_mode": 12600,
+      "margin_rate": null,
+      "swap_rate": null,
+      "sessions": null,
+      "max_leverage": null,
+      "min_lot_size": null,
+      "max_lot_size": null,
+      "commission": null,
+      "commission_calculation_mode": null,
+      "status": 12700
+    }
+  ],
+  "metas": []
+}
