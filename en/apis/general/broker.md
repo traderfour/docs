@@ -254,7 +254,23 @@ $ curl --request GET \
 <Response jfile="v1/platform/list" >
 <template #result>
 
-- Platforms of broker. Check out [Platforms List](https://next-docs.trader4.net/en/api/general/platform?lang=restful&pos=0#list).
+- `id` <span>String</span> ID of Platform .
+- `title` <span>String</span> title of Platform .
+- `slug` <span>String</span> slug of Platform .
+- `icon` <span>String</span> icon of Platform .
+- `cover` <span>String</span> cover of Platform .
+- `title` <span>String</span> title of Platform .
+- `description` <span>String</span> description of Platform .
+- `content` <span>String</span> content of Platform .
+- `url` <span>String</span> url of Platform .
+- `email` <span>String</span> email  .
+- `privacy_policy` <span>String</span> privacy_policy  .
+- `terms_of_use` <span>String</span> terms_of_use  .
+- `address` <span>String</span> address  .
+- `permissions` <span>String</span> permissions  .
+- `oss` <span>String</span> oss  .
+- `status` <span>Integer</span> status  .
+
 
 </template>
 </Response>
@@ -282,7 +298,75 @@ $ curl --request GET \
 <Response jfile="v1/instrument/list" >
 <template #result>
 
-- Instruments of broker. Check out [Instruments List](https://next-docs.trader4.net/en/api/general/instrument?lang=restful&pos=0#list).
+- `id` <span>String</span> ID of Instruments .
+- `name` <span>String</span> name of Instruments .
+- `slug` <span>String</span> slug.
+- `logo` <span>String</span> logo of Instruments.
+- `description` <span>String</span> description of Instruments .
+- `sector` <span>Integer</span> sector.
+- `industry` <span>Integer</span> industry.
+- `digits` <span>Integer</span> digits.
+- `contract_size` <span>Integer</span> contract_size.
+- `spread` <span>Integer</span> spread.
+- `stops_level` <span>Integer</span> stops_level.
+- `margin_currency` <span>String</span> margin_currency.
+- `profit_currency` <span>String</span> profit_currency.
+- `calculation_mode` <span>Integer</span> calculation_mode.
+- `tick_size` <span>String</span> tick_size.
+- `tick_value` <span>Integer</span> tick_value.
+- `chart_mode` <span>Integer</span> chart_mode.
+- `margin_rate` <span>Array of JSON Objects</span>, margin_rate.
+  - `market_buy` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+  - `market_sell` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+  - `buy_limit` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+  - `sell_limit` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+  - `buy_stop` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+  - `sell_stop` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance. 
+  - `buy_stop_limit` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+  - `sell_stop_limit` <span>Array of JSON Objects</span>, margin_rate.
+    - `initial` <span>Integer</span> initial.
+    - `maintenance` <span>Integer</span> maintenance.
+- `trade_mode` <span>Integer</span> trade_mode.
+- `execution_mode` <span>Integer</span> execution_mode.
+- `filling_mode` <span>Integer</span> filling_mode.
+- `expiration_mode` <span>Integer</span> expiration_mode.
+- `order_mode` <span>Integer</span> order_mode.
+- `swap_mode` <span>Integer</span> swap_mode.
+- `minimal_volume` <span>Float</span> minimal_volume.
+- `maximal_volume` <span>Float</span> maximal_volume.
+- `volume_step` <span>Float</span> volume_step.
+- `swap_long` <span>Float</span> swap_long.
+- `swap_short` <span>Float</span> swap_short.
+- `swap_rate` <span>Array of JSON Objects</span>, swap_rate.
+  - `day` <span>String</span> day.
+  - `rate` <span>Integer</span> rate.
+- `sessions` <span>Array of JSON Objects</span>, swap_rate.
+  - `day` <span>String</span> day.
+  - `quote_start` <span>String</span> quote_start.
+  - `quote_end` <span>String</span> quote_end.
+  - `trade_start` <span>String</span> trade_start.
+  - `trade_end` <span>String</span> trade_end.
+- `max_leverage` <span>Integer</span> max_leverage.
+- `min_lot_size` <span>String</span> min_lot_size.
+- `max_lot_size` <span>String</span> max_lot_size.
+- `commission` <span>String</span> commission.
+- `commission_calculation_mode` <span>String</span> commission_calculation_mode.
+- `status` <span>Integer</span> status.
+
 
 </template>
 </Response>

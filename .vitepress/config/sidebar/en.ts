@@ -188,7 +188,7 @@ export const en: DefaultTheme.Sidebar = {
           items:[
             {
               text: "Category",
-              link: "/en/apis/marketplace/category/",
+              link: "/en/apis/category",
 
             },
             {
