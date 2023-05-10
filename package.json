@@ -12,6 +12,7 @@
     "nuxt": "^3.4.3"
   },
   "dependencies": {
-    "@nuxt-themes/docus": "^1.11.1"
+    "@nuxt-themes/docus": "^1.11.1",
+    "vue-json-pretty": "^2.2.4"
   }
 }
